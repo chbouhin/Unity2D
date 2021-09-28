@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private GameObject _bullet;
-    private int damage = 10;
+    private int damage = 8;
 
     void Update()
     {
