@@ -8,11 +8,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
-        // float horizontalInput = Input.GetAxisRaw("Horizontal");
-        // float verticalInput = Input.GetAxisRaw("Vertical");
-        // transform.Translate(new Vector3(horizontalInput, verticalInput, 0).normalized * moveSpeed * Time.deltaTime);
+        // float horizontalInput = Input.GetAxis("Horizontal");
+        // float verticalInput = Input.GetAxis("Vertical");
+        // transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+        transform.Translate(new Vector3(horizontalInput, verticalInput, 0).normalized * moveSpeed * Time.deltaTime);
     }
 }

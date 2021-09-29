@@ -11,9 +11,9 @@ public class BulletManager : MonoBehaviour
     private void Start()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0;
+        mousePosition.z = 0f;
         directionVector = (mousePosition - transform.position).normalized;
-        Destroy(gameObject, 3f); 
+        Destroy(gameObject, 3f);
     }
 
     private void Update()
