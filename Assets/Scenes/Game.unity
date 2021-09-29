@@ -671,6 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3872003188574546354, guid: db60347651554694fb6f633fcbeeaf40, type: 3}
+  _healthBar: {fileID: 913430920}
 --- !u!212 &1306136555
 SpriteRenderer:
   m_ObjectHideFlags: 0

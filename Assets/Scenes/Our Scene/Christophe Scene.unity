@@ -637,6 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 3872003188574546354, guid: db60347651554694fb6f633fcbeeaf40, type: 3}
+  _healthBar: {fileID: 199195852}
 --- !u!58 &534923139
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1038,6 +1039,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1820032906302632286, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820032906302632286, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820032906302632286, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3889933207819265495, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
