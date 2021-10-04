@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyManager : MonoBehaviour
-{
-    [SerializeField] protected GameObject _player;
-    [SerializeField] protected Weapon _weapon;
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private float distanceMovement;
+{    
+    [SerializeField] private Transform _colWall;
+    private bool goToRight = true;
+    private int moveSpeed = 3;
 
     private void Update()
     {
-        float distance = Vector2.Distance(transform.position, _player.transform.position);
-        if (distance > distanceMovement)
-            transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, moveSpeed * Time.deltaTime);
-        if (distance < _weapon.range && _weapon.CanAttack())
-            _weapon.Attack(_player.transform.position);
+        if (Physics2D.OverlapCircle(_colWall.position, 0.25f, LayerMask.GetMask("Wall"))) {
+            goToRight = !goToRight;
+            Vector3 scale = transform.localScale;
+            scale.x = -scale.x;
+            transform.localScale = scale;
+        }
+        if (goToRight)
+            transform.position += transform.right * moveSpeed * Time.deltaTime;
+        else
+            transform.position -= transform.right * moveSpeed * Time.deltaTime;
+    }
+
+    private void OnDrawGizmos()//TEMPORAIRE
+    {
+        Gizmos.DrawWireSphere(_colWall.position, 0.25f);
     }
 }
