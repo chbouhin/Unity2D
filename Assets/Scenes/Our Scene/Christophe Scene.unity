@@ -541,6 +541,7 @@ GameObject:
   - component: {fileID: 534923141}
   - component: {fileID: 534923138}
   - component: {fileID: 534923135}
+  - component: {fileID: 534923142}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -641,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBar: {fileID: 199195852}
+  health: 100
 --- !u!58 &534923139
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -691,6 +693,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapon: {fileID: 534923135}
+--- !u!114 &534923142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534923134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a8f798169875d46b2648f0ff93c194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &881449527
 GameObject:
   m_ObjectHideFlags: 0

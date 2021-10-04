@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Armor : MonoBehaviour
 {
     [SerializeField] private Slider _healthBar;
-    private int health = 100;
+    [SerializeField] private int health = 100;
 
     private void Start()
     {
@@ -19,6 +19,6 @@ public class Armor : MonoBehaviour
         health -= damage;
         _healthBar.value = health;
         if (health <= 0)
-            Destroy(gameObject);
+            gameObject.GetComponent<Death>().Die();
     }
 }
