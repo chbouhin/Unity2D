@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class GameManager : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     [SerializeField] private Health _playerHealth;
     [SerializeField] private Text _textTimer;

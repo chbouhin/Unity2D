@@ -6,5 +6,5 @@ public abstract class Health : MonoBehaviour
 {
     public abstract void TakeDamage();
 
-    protected abstract void Die();
+    public abstract void Die();
 }
