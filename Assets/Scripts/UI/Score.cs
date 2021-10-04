@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class Score : MonoBehaviour
 {
@@ -18,6 +17,5 @@ public class Score : MonoBehaviour
     {
         totalScore += score;
         _textScore.text = "Score : " + totalScore.ToString("00000.##");
-        print("tes");
     }
 }

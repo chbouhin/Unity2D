@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
+    [SerializeField] private GameManager _gameManager;
+    
     public override void TakeDamage()
     {
         Die();
@@ -11,6 +13,6 @@ public class PlayerHealth : Health
 
     public override void Die()
     {
-        print("PLAYER DIE - END");
+        _gameManager.LooseGame();
     }
 }

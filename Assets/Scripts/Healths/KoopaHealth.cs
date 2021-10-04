@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : Health
+public class KoopaHealth : Health
 {
-    [SerializeField] private int scoreGive = 100;
-    private Score score;
+    private Score _score;
+    private int scoreGive = 100;
 
     private void Start()
     {
-        score = GameObject.Find("Score").GetComponent<Score>();
+        _score = GameObject.Find("Score").GetComponent<Score>();
     }
 
     public override void TakeDamage()
@@ -20,7 +20,7 @@ public class EnemyHealth : Health
 
     public override void Die()
     {
-        score.AddScore(scoreGive);
+        _score.AddScore(scoreGive);
         Destroy(gameObject);
     }
 }

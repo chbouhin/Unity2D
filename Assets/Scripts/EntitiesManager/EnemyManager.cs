@@ -5,12 +5,12 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {    
     [SerializeField] private Transform _colWall;
+    [SerializeField] private int moveSpeed = 3;
     private bool goToRight = true;
-    private int moveSpeed = 3;
 
     private void Update()
     {
-        if (Physics2D.OverlapCircle(_colWall.position, 0.25f, LayerMask.GetMask("Wall"))) {
+        if (Physics2D.OverlapBox(_colWall.position, _colWall.localScale, 0, LayerMask.GetMask("Wall"))) {
             goToRight = !goToRight;
             Vector3 scale = transform.localScale;
             scale.x = -scale.x;
@@ -24,6 +24,6 @@ public class EnemyManager : MonoBehaviour
 
     private void OnDrawGizmos()//TEMPORAIRE
     {
-        Gizmos.DrawWireSphere(_colWall.position, 0.25f);
+        Gizmos.DrawCube(_colWall.position, _colWall.localScale);
     }
 }

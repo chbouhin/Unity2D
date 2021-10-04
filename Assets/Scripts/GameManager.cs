@@ -6,30 +6,33 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Health _playerHealth;
-    [SerializeField] private Text _textTimer;
-    [SerializeField] private float timer;
+    [SerializeField] private Score _score;
+    [SerializeField] private Timer _timer;
+    [SerializeField] private Button _continue;
+    [SerializeField] private Pause _pause;
 
-    private void Start()
-    {
-        _textTimer.text = "Timer : " + timer;
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            _pause.EscapeButton();
+        if (Input.GetKeyDown(KeyCode.W))//Temporaire
+            WinGame();
+        if (Input.GetKeyDown(KeyCode.L))//Temporaire
+            LooseGame();
     }
 
-    private void Update()
+
+    public void LooseGame()
     {
-        if (timer > 0) {
-            timer -= Time.deltaTime;
-            _textTimer.text = "Timer : " + FormatTime(timer);
-            if (timer <= 0)
-                _textTimer.color = Color.red;
-        } else
-            _playerHealth.Die();
+        _timer.gameObject.SetActive(false);
+        _pause.gameObject.SetActive(true);
+        _continue.interactable = false;
     }
 
-    private string FormatTime(float time)
+    public void WinGame()
     {
-        int minutes = (int) time / 60;
-        int seconds = (int) Math.Ceiling(time - 60 * minutes);
-        return string.Format("{0:00}.{1:00}", minutes, seconds);
+        _continue.interactable = false;
+        _timer.gameObject.SetActive(false);
+        _score.AddScore((int) (_timer.timer * 10));
+        _pause.gameObject.SetActive(true);
     }
 }

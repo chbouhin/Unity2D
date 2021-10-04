@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private Health _playerHealth;
     [SerializeField] private Text _textTimer;
-    [SerializeField] private float timer;
+    public float timer;
 
     private void Start()
     {
