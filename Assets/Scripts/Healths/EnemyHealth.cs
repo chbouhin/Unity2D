@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KoopaHealth : Health
+public class EnemyHealth : Health
 {
     private Score _score;
-    private int scoreGive = 100;
+    [SerializeField] private int scoreGive = 100;
+    [SerializeField] private int life = 1;
 
     private void Start()
     {
@@ -15,7 +16,9 @@ public class KoopaHealth : Health
 
     public override void TakeDamage()
     {
-        Die();
+        life -= 1;
+        if (life <= 0)
+            Die();
     }
 
     public override void Die()

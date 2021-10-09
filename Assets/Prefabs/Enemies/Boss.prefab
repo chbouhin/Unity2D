@@ -1,40 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1520886308653636649
+--- !u!114 &715705451435914335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246724767834225000}
+  m_GameObject: {fileID: 2222277157306786954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df42d829f5391bf43854b5a81a5084cf, type: 3}
+  m_Script: {fileID: 11500000, guid: c6cc9a1bd01aca8489a7d1d0c7409468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _toInvoke: {fileID: 7865370251142625969, guid: 06296d7a2abf4d14e9c5845ae4c67502, type: 3}
---- !u!1001 &8566489280270001694
+  scoreGive: 500
+  life: 3
+--- !u!114 &5859661507526350982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222277157306786954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f22c0340616ce489f7f6bfc477da2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fireBall: {fileID: 429735994451216895, guid: 6be646b6777d2ff4db0492f1ae980597, type: 3}
+  _spawnEnemy: {fileID: 246724767834225000, guid: 528311e87631c4e45b78e406f038cd59, type: 3}
+--- !u!1001 &7735459088676404220
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6850739882952925562, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8388947580895695332, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8388947580895695332, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.55
-      objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671670, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_Name
-      value: BoombaGiant
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_RootOrder
@@ -42,19 +45,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 2.65
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.44
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_LocalPosition.z
@@ -88,10 +91,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
---- !u!1 &246724767834225000 stripped
+--- !u!1 &2222277157306786954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8470921539911671670, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
-  m_PrefabInstance: {fileID: 8566489280270001694}
+  m_PrefabInstance: {fileID: 7735459088676404220}
   m_PrefabAsset: {fileID: 0}

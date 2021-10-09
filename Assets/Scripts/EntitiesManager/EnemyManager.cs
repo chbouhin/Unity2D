@@ -6,7 +6,7 @@ public class EnemyManager : MonoBehaviour
 {    
     [SerializeField] private Transform _colWall;
     [SerializeField] private int moveSpeed = 3;
-    private bool goToRight = true;
+    private bool goToRight = false;
 
     private void Update()
     {

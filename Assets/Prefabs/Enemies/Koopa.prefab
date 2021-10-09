@@ -1,6 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2639420970353460747
+--- !u!114 &2523107477730235841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3490717576383400790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8dffde99a87ea468ab400f76a0ca6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _colWall: {fileID: 0}
+  moveSpeed: 3
+--- !u!114 &8831082684611828818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21,7 +35,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8470921539911671670, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_Name
-      value: Enemy (1) Variant
+      value: Koopa
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_RootOrder
