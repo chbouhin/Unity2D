@@ -9,7 +9,7 @@ public class FireBall : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 10f);
         _directionVector = (GameObject.Find("Player").transform.position - transform.position).normalized;
     }
 

@@ -13,7 +13,6 @@ public class EnemyManager : MonoBehaviour
             transform.position += transform.right * moveSpeed * Time.deltaTime;
         else
             transform.position -= transform.right * moveSpeed * Time.deltaTime;
-        
     }
 
     public void ChangeDirection()

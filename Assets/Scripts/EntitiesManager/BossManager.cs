@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class BossManager : MonoBehaviour
 {
+    [SerializeField] private Transform _leftPointMov;
+    [SerializeField] private Transform _rightPointMov;
     [SerializeField] private GameObject _fireBall;
     [SerializeField] private GameObject _spawnEnemy;
     private float cooldownFireball = 3f;
     private float timerCooldownFireball = 0f;
     private float cooldownSpawnEnemy = 5f;
     private float timerCooldownSpawnEnemy = 0f;
+    private float moveSpeed = 4f;
+    private bool goToRight = false;
 
     private void Update()
     {
+        if (goToRight) {
+            transform.position += transform.right * moveSpeed * Time.deltaTime;
+            if (transform.position.x >= _rightPointMov.position.x)
+                goToRight = false;
+        } else {
+            transform.position -= transform.right * moveSpeed * Time.deltaTime;
+            if (transform.position.x <= _leftPointMov.position.x)
+                goToRight = true;
+        }
         FireBall();
         SpawnEnemy();
     }

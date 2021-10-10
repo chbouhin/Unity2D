@@ -26,8 +26,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f22c0340616ce489f7f6bfc477da2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _leftPointMov: {fileID: 0}
+  _rightPointMov: {fileID: 0}
   _fireBall: {fileID: 429735994451216895, guid: 6be646b6777d2ff4db0492f1ae980597, type: 3}
-  _spawnEnemy: {fileID: 246724767834225000, guid: 528311e87631c4e45b78e406f038cd59, type: 3}
+  _spawnEnemy: {fileID: 1335919670853551932, guid: 3c0da3447a6932e4b844940577f91766, type: 3}
 --- !u!1001 &7735459088676404220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37,7 +39,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8470921539911671670, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_Name
-      value: Boss
+      value: BossEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_RootOrder
