@@ -4,26 +4,30 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {    
-    [SerializeField] private Transform _colWall;
     [SerializeField] private int moveSpeed = 3;
     private bool goToRight = false;
 
     private void Update()
     {
-        if (Physics2D.OverlapBox(_colWall.position, _colWall.localScale, 0, LayerMask.GetMask("Wall"))) {
-            goToRight = !goToRight;
-            Vector3 scale = transform.localScale;
-            scale.x = -scale.x;
-            transform.localScale = scale;
-        }
         if (goToRight)
             transform.position += transform.right * moveSpeed * Time.deltaTime;
         else
             transform.position -= transform.right * moveSpeed * Time.deltaTime;
+        
     }
 
-    private void OnDrawGizmos()//TEMPORAIRE
+    public void ChangeDirection()
     {
-        Gizmos.DrawCube(_colWall.position, _colWall.localScale);
+        goToRight = !goToRight;
+        Vector3 scale = transform.localScale;
+        scale.x = -scale.x;
+        transform.localScale = scale;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.transform.CompareTag("Player")) {
+            col.gameObject.GetComponent<Health>().TakeDamage();
+        }
     }
 }

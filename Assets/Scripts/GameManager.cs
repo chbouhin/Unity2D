@@ -11,13 +11,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button _continue;
     [SerializeField] private Pause _pause;
 
-    private void Update() {
+    private void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Escape))
             _pause.EscapeButton();
-        if (Input.GetKeyDown(KeyCode.W))//Temporaire
-            WinGame();
-        if (Input.GetKeyDown(KeyCode.L))//Temporaire
-            LooseGame();
     }
 
 
