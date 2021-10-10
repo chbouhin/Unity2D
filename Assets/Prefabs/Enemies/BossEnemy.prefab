@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &715705451435914335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2222277157306786954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6cc9a1bd01aca8489a7d1d0c7409468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreGive: 500
-  life: 3
 --- !u!114 &5859661507526350982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +16,19 @@ MonoBehaviour:
   _rightPointMov: {fileID: 0}
   _fireBall: {fileID: 429735994451216895, guid: 6be646b6777d2ff4db0492f1ae980597, type: 3}
   _spawnEnemy: {fileID: 1335919670853551932, guid: 3c0da3447a6932e4b844940577f91766, type: 3}
+--- !u!114 &1369401386238430557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222277157306786954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8666f6f374a332e4fb995e2b49f7492e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bossManager: {fileID: 5859661507526350982}
 --- !u!1001 &7735459088676404220
 PrefabInstance:
   m_ObjectHideFlags: 0

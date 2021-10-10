@@ -23,7 +23,7 @@ public class FireBall : MonoBehaviour
         if (col.gameObject.CompareTag("Player")) {
             col.gameObject.GetComponent<Health>().TakeDamage();
             Destroy(gameObject);
-        } else if (!col.gameObject.CompareTag("Enemy")) {
+        } else if (col.gameObject.CompareTag("Wall")) {
             Destroy(gameObject);
         }
     }

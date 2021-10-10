@@ -8,11 +8,11 @@ public class BossManager : MonoBehaviour
     [SerializeField] private Transform _rightPointMov;
     [SerializeField] private GameObject _fireBall;
     [SerializeField] private GameObject _spawnEnemy;
-    private float cooldownFireball = 3f;
+    private float cooldownFireball = 6f;
     private float timerCooldownFireball = 0f;
-    private float cooldownSpawnEnemy = 5f;
+    private float cooldownSpawnEnemy = 10f;
     private float timerCooldownSpawnEnemy = 0f;
-    private float moveSpeed = 4f;
+    private float moveSpeed = 3f;
     private bool goToRight = false;
 
     private void Update()
@@ -46,8 +46,14 @@ public class BossManager : MonoBehaviour
             timerCooldownSpawnEnemy += Time.deltaTime;
         } else {
             Rigidbody2D rb2D = Instantiate(_spawnEnemy, transform.position + new Vector3(-3, 3, 0), Quaternion.identity).GetComponent<Rigidbody2D>();
-            rb2D.AddForce(Vector2.up * -Vector2.right * 5);
+            rb2D.velocity = new Vector2(-3, 3);
             timerCooldownSpawnEnemy -= cooldownSpawnEnemy;
         }
+    }
+
+    public void BeStronger()
+    {
+        cooldownFireball *= 2f / 3f;
+        cooldownSpawnEnemy *= 2f / 3f;
     }
 }

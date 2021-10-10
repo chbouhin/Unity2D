@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealth : Health
+public class BossHealth : Health
 {
+    [SerializeField] private BossManager _bossManager;
     private Score _score;
-    [SerializeField] private int scoreGive = 100;
+    private int scoreGive = 500;
+    private int life = 3;
 
     private void Start()
     {
@@ -15,7 +17,10 @@ public class EnemyHealth : Health
 
     public override void TakeDamage()
     {
-        Die();
+        life -= 1;
+        if (life <= 0)
+            Die();
+        _bossManager.BeStronger();
     }
 
     public override void Die()
