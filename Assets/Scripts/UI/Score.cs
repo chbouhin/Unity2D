@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     [SerializeField] private Text _textScore;
-    private int totalScore = 0;
+    [SerializeField] private TaskScore _taskScore;
+    public int totalScore = 0;
 
     private void Start()
     {
@@ -17,5 +18,6 @@ public class Score : MonoBehaviour
     {
         totalScore += score;
         _textScore.text = "Score : " + totalScore.ToString("00000.##");
+        _taskScore.ScoreChange(totalScore);
     }
 }

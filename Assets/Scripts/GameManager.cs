@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Timer _timer;
     [SerializeField] private Button _continue;
     [SerializeField] private Pause _pause;
+    [SerializeField] private Text _textTaskFinishGame;
 
     private void Update()
     {
@@ -31,5 +32,6 @@ public class GameManager : MonoBehaviour
         _timer.gameObject.SetActive(false);
         _score.AddScore((int) (_timer.timer * 10));
         _pause.gameObject.SetActive(true);
+        _textTaskFinishGame.color = Color.green;
     }
 }
