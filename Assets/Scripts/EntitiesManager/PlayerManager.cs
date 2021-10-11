@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb2d;
-    [SerializeField] private PlayerHitBoxFeet _playerHitBoxFeet;
+    [SerializeField] private Transform _groundCheck;
+    [SerializeField] private LayerMask _groundLayer;
     private float moveSpeed = 6f;
     private float jumpForce = 10f;
-    private bool canJump = true;
     private bool isJumping = false;
     private float longJump = 0.5f;
     private float timerLongJump = 0f;
@@ -32,14 +32,10 @@ public class PlayerManager : MonoBehaviour
     private void TryJumping()
     {
         if (Input.GetKey(KeyCode.Z)) {
-            if (isJumping) {
+            if (isJumping)
                 StillJump();
-            } else if (_rb2d.velocity.y == 0) {
-                if (canJump && _playerHitBoxFeet.isTouchingGround)
-                    Jump();
-                else
-                    canJump = true;
-            }
+            else if (_rb2d.velocity.y == 0 && Physics2D.OverlapBox(_groundCheck.position, _groundCheck.localScale, 0, _groundLayer))
+                Jump();
         } else {
             timerLongJump = 0f;
             isJumping = false;
@@ -60,7 +56,6 @@ public class PlayerManager : MonoBehaviour
     public void Jump()
     {
         _rb2d.velocity = new Vector2(0, jumpForce);
-        canJump = false;
         isJumping = true;
     }
 
