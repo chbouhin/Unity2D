@@ -4,29 +4,68 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    //Variables
-     public float speed = 6.0F;
-     public float jumpSpeed = 8.0F; 
-     public float gravity = 20.0F;
-     private Vector3 moveDirection = Vector3.zero;
- 
-     void Update() {
-         CharacterController controller = GetComponent<CharacterController>();
-         // is the controller on the ground?
-         if (controller.isGrounded) {
-             //Feed moveDirection with input.
-             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-             moveDirection = transform.TransformDirection(moveDirection);
-             //Multiply it by speed.
-             moveDirection *= speed;
-             //Jumping
-             if (Input.GetButton("Jump"))
-                 moveDirection.y = jumpSpeed;
-             
-         }
-         //Applying gravity to the controller
-         moveDirection.y -= gravity * Time.deltaTime;
-         //Making the character move
-         controller.Move(moveDirection * Time.deltaTime);
-     }
+    [SerializeField] private Rigidbody2D _rb2d;
+    [SerializeField] private PlayerHitBoxFeet _playerHitBoxFeet;
+    private float moveSpeed = 6f;
+    private float jumpForce = 10f;
+    private bool canJump = true;
+    private bool isJumping = false;
+    private float longJump = 0.5f;
+    private float timerLongJump = 0f;
+
+    private void Update()
+    {
+        Movement();
+        TryJumping();
+        if (_rb2d.velocity.y < -15)
+            _rb2d.velocity = new Vector2(0, -15);
+    }
+
+    private void Movement()
+    {
+        if (Input.GetKey(KeyCode.Q))
+            transform.position -= transform.right * moveSpeed * Time.deltaTime;
+        if (Input.GetKey(KeyCode.D))
+            transform.position += transform.right * moveSpeed * Time.deltaTime;
+    }
+
+    private void TryJumping()
+    {
+        if (Input.GetKey(KeyCode.Z)) {
+            if (isJumping) {
+                StillJump();
+            } else if (_rb2d.velocity.y == 0) {
+                if (canJump && _playerHitBoxFeet.isTouchingGround)
+                    Jump();
+                else
+                    canJump = true;
+            }
+        } else {
+            timerLongJump = 0f;
+            isJumping = false;
+        }
+    }
+
+    public void StillJump()
+    {
+        if (timerLongJump < longJump && _rb2d.velocity.y > 0) {
+            timerLongJump += Time.deltaTime;
+            _rb2d.velocity = new Vector2(0, jumpForce);
+        } else {
+            timerLongJump = 0f;
+            isJumping = false;
+        }
+    }
+
+    public void Jump()
+    {
+        _rb2d.velocity = new Vector2(0, jumpForce);
+        canJump = false;
+        isJumping = true;
+    }
+
+    public bool IsFalling()
+    {
+        return _rb2d.velocity.y <= 0;
+    }
 }
