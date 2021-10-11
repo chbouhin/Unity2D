@@ -1878,6 +1878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 1763910331}
+  _spriteRenderer: {fileID: 1042468934}
+  _smallSprite: {fileID: -2889000616072748326, guid: 2aac40b720fae4cbcb87008cff1a3923, type: 3}
 --- !u!50 &1042468932
 Rigidbody2D:
   serializedVersion: 4
@@ -1965,8 +1967,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.9840771, b: 0.6666666, a: 1}
+  m_Sprite: {fileID: -7004796341820662950, guid: 2aac40b720fae4cbcb87008cff1a3923, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1984,7 +1986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042468929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.38, y: -2.74, z: 0}
+  m_LocalPosition: {x: 0.01, y: -1.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1021858435}
@@ -3507,7 +3509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Get 1000 to score (0/1000)
+  m_Text: Get 5000 to score (0/5000)
 --- !u!222 &1476499732
 CanvasRenderer:
   m_ObjectHideFlags: 0

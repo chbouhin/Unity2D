@@ -7,7 +7,7 @@ public class BossHealth : Health
 {
     [SerializeField] private BossManager _bossManager;
     private Score _score;
-    private int scoreGive = 500;
+    private int scoreGive = 1000;
     private int life = 3;
 
     private void Start()
@@ -17,8 +17,8 @@ public class BossHealth : Health
 
     public override void TakeDamage()
     {
-        life -= 1;
-        if (life <= 0)
+        life--;
+        if (life == 0)
             Die();
         _bossManager.BeStronger();
     }

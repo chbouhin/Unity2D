@@ -8,11 +8,11 @@ public class BossManager : MonoBehaviour
     [SerializeField] private Transform _rightPointMov;
     [SerializeField] private GameObject _fireBall;
     [SerializeField] private GameObject _spawnEnemy;
-    private float cooldownFireball = 6f;
+    private float cooldownFireball = 7f;
     private float timerCooldownFireball = 0f;
-    private float cooldownSpawnEnemy = 10f;
+    private float cooldownSpawnEnemy = 15f;
     private float timerCooldownSpawnEnemy = 0f;
-    private float moveSpeed = 3f;
+    private float moveSpeed = 2f;
     private bool goToRight = false;
 
     private void Update()

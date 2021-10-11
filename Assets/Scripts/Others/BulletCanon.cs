@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BulletCanon : MonoBehaviour
 {
-    private int moveSpeed = 5;
+    private float moveSpeed = 7f;
 
     private void Update()
     {
-        transform.position -= transform.up * moveSpeed * Time.deltaTime;
+        transform.position -= transform.right * moveSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

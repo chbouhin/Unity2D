@@ -9,13 +9,13 @@ public class TaskScore : MonoBehaviour
 
     private void Start()
     {
-        _textTask.text = "Get 1000 to score (0/1000)";
+        _textTask.text = "Get 5000 to score (0/5000)";
     }
 
     public void ScoreChange(int score)
     {
-        _textTask.text = "Get 1000 to score (" + score + "/1000)";
-        if (score >= 1000)
+        _textTask.text = "Get 5000 to score (" + score + "/5000)";
+        if (score >= 5000)
             _textTask.color = Color.green;
     }
 }
