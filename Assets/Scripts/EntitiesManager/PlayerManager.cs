@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    [SerializeField] private KeyInput _keyInput;
     [SerializeField] private Rigidbody2D _rb2d;
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private LayerMask _groundLayer;
@@ -23,15 +24,15 @@ public class PlayerManager : MonoBehaviour
 
     private void Movement()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(_keyInput.left))
             transform.position -= transform.right * moveSpeed * Time.deltaTime;
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(_keyInput.right))
             transform.position += transform.right * moveSpeed * Time.deltaTime;
     }
 
     private void TryJumping()
     {
-        if (Input.GetKey(KeyCode.Z)) {
+        if (Input.GetKey(_keyInput.jump)) {
             if (isJumping)
                 StillJump();
             else if (_rb2d.velocity.y == 0 && Physics2D.OverlapBox(_groundCheck.position, _groundCheck.localScale, 0, _groundLayer))

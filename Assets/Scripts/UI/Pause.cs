@@ -27,9 +27,4 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Game");
     }
-
-    public void ExitButton()
-    {
-        SceneManager.LoadScene("Menu");
-    }
 }

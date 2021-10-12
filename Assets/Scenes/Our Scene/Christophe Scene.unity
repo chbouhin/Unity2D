@@ -1536,16 +1536,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1205818342}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: ExitButton
-        m_Mode: 1
+      - m_Target: {fileID: 1763910333}
+        m_TargetAssemblyTypeName: SceneUpdate, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &753549783
@@ -1860,6 +1860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857a5be62f24fc54eb9fa5827d4d1055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _keyInput: {fileID: 1763910334}
   _rb2d: {fileID: 1042468932}
   _groundCheck: {fileID: 1325412153}
   _groundLayer:
@@ -4134,6 +4135,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1763910332}
   - component: {fileID: 1763910331}
+  - component: {fileID: 1763910333}
+  - component: {fileID: 1763910334}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4153,6 +4156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4e87ae457cdd34c90f0f412c03a1a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _keyInput: {fileID: 1763910334}
   _score: {fileID: 1736764902}
   _timer: {fileID: 371184908}
   _continue: {fileID: 1310032666}
@@ -4173,6 +4177,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763910333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763910330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708ee68e61499844c9ab269e024093bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1763910334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763910330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88e3de665493bdf469f16c9a64b6495e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savePath: 
+  jump: 0
+  left: 0
+  right: 0
+  pause: 0
 --- !u!1 &1773553519
 GameObject:
   m_ObjectHideFlags: 0

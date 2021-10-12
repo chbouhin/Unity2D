@@ -6,6 +6,7 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private KeyInput _keyInput;
     [SerializeField] private Score _score;
     [SerializeField] private Timer _timer;
     [SerializeField] private Button _continue;
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(_keyInput.pause))
             _pause.EscapeButton();
     }
 
