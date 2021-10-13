@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Others;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Coin : Item
 {
     [SerializeField] private Animation anim;
     [SerializeField] private Score score;
-    private AudioSource audio;
+    
+    [SerializeField] private AudioClip sound;
+    public AudioManager audioManager;
     
     // Start is called before the first frame update
     void Start()
     {
-        audio = gameObject.GetComponent<AudioSource>();
-        audio.Play();
         anim.Play("CoinPopUp");
         score.AddScore(50);
     }
@@ -22,5 +23,11 @@ public class Coin : MonoBehaviour
     {
         if (!anim.IsPlaying("CoinPopUp"))
             Destroy(gameObject);
+    }
+
+    public override void Init(AudioManager manager)
+    {
+        audioManager = manager;
+        audioManager.PlaySound(sound);
     }
 }
