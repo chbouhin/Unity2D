@@ -7,12 +7,17 @@ public class Mushroom : MonoBehaviour
     [SerializeField] private PlayerHealth player;
     [SerializeField] private Animation anim;
     [SerializeField] private int moveSpeed = 3;
+    [SerializeField] AudioClip audioPopUp;
+    [SerializeField] AudioClip audioUse;
+    private AudioSource audio;
     private int direction;
     
     // Start is called before the first frame update
     void Start()
     {
+        audio = gameObject.GetComponent<AudioSource>();
         anim.Play("MushroomPopUp");
+        audio.PlayOneShot(audioPopUp);
         direction = Random.Range(1, 3);
     }
 
@@ -33,6 +38,7 @@ public class Mushroom : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Player")) {
             player.GetBonus();
+            audio.PlayOneShot(audioUse);
             Destroy(gameObject);
         } else if (col.transform.CompareTag("Wall"))
         {

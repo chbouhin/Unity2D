@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269865, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.17
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269865, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269865, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269867, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_Name
-      value: Mushroom bloc
+      value: Mushroom bloc Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
