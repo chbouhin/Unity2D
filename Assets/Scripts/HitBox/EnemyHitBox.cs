@@ -8,7 +8,7 @@ public class EnemyHitBox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.CompareTag("Wall") || col.transform.CompareTag("Enemy"))
+        if (col.transform.CompareTag("Wall") || col.transform.CompareTag("Enemy") || col.transform.CompareTag("InvisibleWall"))
             _enemyManager.ChangeDirection();
     }
 }

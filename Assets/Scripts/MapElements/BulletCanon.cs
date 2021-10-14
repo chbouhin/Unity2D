@@ -13,8 +13,11 @@ public class BulletCanon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Enemy"))
+        if (col.gameObject.CompareTag("Enemy")) {
             col.gameObject.GetComponent<Health>().TakeDamage();
-        Destroy(gameObject);
+            Destroy(gameObject);
+        } else if (col.gameObject.CompareTag("Wall")) {
+            Destroy(gameObject);
+        }
     }
 }
