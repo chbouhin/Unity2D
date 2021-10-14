@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // [SerializeField] private Animation _anim;
+    [SerializeField] private Animation _anim;
     private Score _score;
     private AudioSource _audio;
     
@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
     {
         _score = GameObject.Find("Score").GetComponent<Score>();
         _audio = gameObject.GetComponent<AudioSource>();
-        // _anim.Play("CoinPopUp");
+        _anim.Play("CoinPopUp");
     }
 
     private void OnTriggerEnter2D(Collider2D col)

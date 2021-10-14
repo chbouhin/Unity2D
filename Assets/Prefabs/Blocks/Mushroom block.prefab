@@ -10,18 +10,18 @@ PrefabInstance:
     - target: {fileID: 3047113584556072776, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: bonusItem
       value: 
-      objectReference: {fileID: 2389442792691018649, guid: 981b8c979ed9c0142aa52562c7c9270b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269865, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269865, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269865, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6719254311034269865, guid: 2f80babaf72b6a04cb89850753385913, type: 3}
       propertyPath: m_LocalPosition.z

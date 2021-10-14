@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7419692481986698317}
   - component: {fileID: 7640658144877611853}
+  - component: {fileID: 3027567440674507203}
   - component: {fileID: 3483754969669265157}
-  - component: {fileID: -4476718512833564015}
   - component: {fileID: 2764987170133427784}
+  - component: {fileID: -4476718512833564015}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001660238797500429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.22, y: -0.25, z: 1}
-  m_LocalScale: {x: 0.8751, y: 0.9219, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -85,6 +86,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &3027567440674507203
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001660238797500429}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!111 &3483754969669265157
 Animation:
   m_ObjectHideFlags: 0
@@ -101,20 +118,6 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &-4476718512833564015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001660238797500429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7281249ead23dbf4c8edfb53a6f78a43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 3483754969669265157}
-  score: {fileID: 0}
 --- !u!82 &2764987170133427784
 AudioSource:
   m_ObjectHideFlags: 0
@@ -126,7 +129,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4d39f9bea584f664da37c2289e169141, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -211,3 +214,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-4476718512833564015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001660238797500429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7281249ead23dbf4c8edfb53a6f78a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anim: {fileID: 3483754969669265157}

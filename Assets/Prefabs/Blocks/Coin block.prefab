@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6719254311034269867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2112317, y: -0.25088087, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioManagerObject: {fileID: 0}
   hitSound: {fileID: 8300000, guid: c2d9d5d0a5958064682516e4f56de688, type: 3}
-  bonusItem: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+  bonusItem: {fileID: 0}
   usedSprite: {fileID: -5055118836324436979, guid: 2aac40b720fae4cbcb87008cff1a3923, type: 3}
 --- !u!212 &6719254311034269866
 SpriteRenderer:
