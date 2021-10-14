@@ -20,8 +20,10 @@ public class PlayerHealth : Health
     
     public void GetBonus()
     {
-        life++;
-        _spriteRenderer.sprite = _baseSprite;
+        if (life == 1) {
+            life++;
+            _spriteRenderer.sprite = _baseSprite;
+        }
     }
 
     public override void Die()
