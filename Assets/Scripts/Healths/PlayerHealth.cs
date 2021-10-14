@@ -5,9 +5,15 @@ using UnityEngine;
 public class PlayerHealth : Health
 {
     [SerializeField] private GameManager _gameManager;
-    [SerializeField] private Sprite _baseSprite;
     [SerializeField] private Sprite _smallSprite;
+    private Sprite _baseSprite;
     private int life = 2;
+
+    private void Start()
+    {
+        base.Start();
+        _baseSprite = _spriteRenderer.sprite;
+    }
 
     public override void TakeDamage()
     {

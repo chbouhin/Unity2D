@@ -13,6 +13,12 @@ public class PlayerManager : MonoBehaviour
     private bool isJumping = false;
     private float longJump = 0.5f;
     private float timerLongJump = 0f;
+    private Vector3 _scale;
+
+    private void Start()
+    {
+        _scale = transform.localScale;
+    }
 
     private void Update()
     {
@@ -24,10 +30,20 @@ public class PlayerManager : MonoBehaviour
 
     private void Movement()
     {
-        if (Input.GetKey(_keyInput.left))
+        if (Input.GetKey(_keyInput.left)) {
             transform.position -= transform.right * moveSpeed * Time.deltaTime;
-        if (Input.GetKey(_keyInput.right))
+            if (transform.localScale.x > 0) {
+                _scale.x = -1;
+                transform.localScale = _scale;
+            }
+        }
+        if (Input.GetKey(_keyInput.right)) {
             transform.position += transform.right * moveSpeed * Time.deltaTime;
+            if (transform.localScale.x < 0) {
+                _scale.x = 1;
+                transform.localScale = _scale;
+            }
+        }
     }
 
     private void TryJumping()
