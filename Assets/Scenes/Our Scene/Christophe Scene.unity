@@ -1880,6 +1880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gameManager: {fileID: 1763910331}
   _spriteRenderer: {fileID: 1042468934}
+  _baseSprite: {fileID: 0}
   _smallSprite: {fileID: -2889000616072748326, guid: 2aac40b720fae4cbcb87008cff1a3923, type: 3}
 --- !u!50 &1042468932
 Rigidbody2D:
@@ -2118,7 +2119,7 @@ GameObject:
   - component: {fileID: 1078953444}
   - component: {fileID: 1078953443}
   m_Layer: 5
-  m_Name: Coins
+  m_Name: CoinsTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3281,7 +3282,7 @@ GameObject:
   - component: {fileID: 1346709516}
   - component: {fileID: 1346709515}
   m_Layer: 5
-  m_Name: Finish Game
+  m_Name: Finish GameTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3426,6 +3427,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361408717}
   m_CullTransparentMesh: 1
+--- !u!1001 &1397127292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1617993413124586064, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_Name
+      value: Coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1500755
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.20937136
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7348317003623139828, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fa2f453770cc044eaf4687155f8139a, type: 3}
 --- !u!1 &1476499728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,7 +3497,7 @@ GameObject:
   - component: {fileID: 1476499731}
   - component: {fileID: 1476499730}
   m_Layer: 5
-  m_Name: Score
+  m_Name: ScoreTask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

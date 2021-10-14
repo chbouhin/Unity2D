@@ -12,8 +12,7 @@ public class Mushroom : MonoBehaviour
     private AudioSource audio;
     private int direction;
     
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         audio = gameObject.GetComponent<AudioSource>();
         anim.Play("MushroomPopUp");
@@ -21,11 +20,9 @@ public class Mushroom : MonoBehaviour
         direction = Random.Range(1, 3);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (!anim.IsPlaying("MushroomPopUp"))
-        {
+        if (!anim.IsPlaying("MushroomPopUp")) {
             gameObject.GetComponent<Animator>().enabled = false;
             if (direction == 1)
                 transform.position += transform.right * moveSpeed * Time.deltaTime;
@@ -40,8 +37,7 @@ public class Mushroom : MonoBehaviour
             player.GetBonus();
             audio.PlayOneShot(audioUse);
             Destroy(gameObject);
-        } else if (col.transform.CompareTag("Wall"))
-        {
+        } else if (col.transform.CompareTag("Wall")) {
             direction = direction == 1 ? 2 : 1;
         }
     }

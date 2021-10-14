@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7348317003623139828}
   - component: {fileID: 975299365127191169}
   - component: {fileID: 5109011197888782236}
-  - component: {fileID: 7586676785189974029}
   - component: {fileID: 8592552027958118213}
+  - component: {fileID: 2237353775765125818}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -101,19 +101,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7586676785189974029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617993413124586064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4faa8dd2e59fc6045a0a2231e6e5872c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _score: {fileID: 0}
 --- !u!82 &8592552027958118213
 AudioSource:
   m_ObjectHideFlags: 0
@@ -125,7 +112,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4d39f9bea584f664da37c2289e169141, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -210,3 +197,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2237353775765125818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617993413124586064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7281249ead23dbf4c8edfb53a6f78a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

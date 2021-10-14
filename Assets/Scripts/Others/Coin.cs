@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    [SerializeField] private Animation anim;
-    [SerializeField] private Score score;
-    private AudioSource audio;
+    // [SerializeField] private Animation _anim;
+    private Score _score;
+    private AudioSource _audio;
     
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        audio = gameObject.GetComponent<AudioSource>();
-        audio.Play();
-        anim.Play("CoinPopUp");
-        score.AddScore(50);
+        _score = GameObject.Find("Score").GetComponent<Score>();
+        _audio = gameObject.GetComponent<AudioSource>();
+        // _anim.Play("CoinPopUp");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (!anim.IsPlaying("CoinPopUp"))
+        if (col.gameObject.CompareTag("Player")) {
+            _score.AddScore(50);
+            _audio.Play();
             Destroy(gameObject);
+        }
     }
 }

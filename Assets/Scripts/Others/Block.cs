@@ -7,20 +7,12 @@ public class Block : MonoBehaviour
     [SerializeField] private GameObject audioManagerObject;
     [SerializeField] private AudioClip hitSound;
     [SerializeField] private AudioClip breakSound;
-    private AudioManager audioManager;
-    
     [SerializeField] private bool destroyable;
+    private AudioManager audioManager;    
     
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         audioManager = audioManagerObject.GetComponent<AudioManager>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnMouseDown()//TEMPORAIRE
