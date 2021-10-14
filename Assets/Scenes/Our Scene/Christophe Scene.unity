@@ -1878,8 +1878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d37c70faab43c24485d3a6b97c0d5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManager: {fileID: 1763910331}
   _spriteRenderer: {fileID: 1042468934}
+  _gameManager: {fileID: 1763910331}
   _baseSprite: {fileID: 0}
   _smallSprite: {fileID: -2889000616072748326, guid: 2aac40b720fae4cbcb87008cff1a3923, type: 3}
 --- !u!50 &1042468932

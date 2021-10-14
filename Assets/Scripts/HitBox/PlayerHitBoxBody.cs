@@ -8,7 +8,7 @@ public class PlayerHitBoxBody : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.CompareTag("Enemy"))
+        if (col.transform.CompareTag("Enemy") && _health.IsInvicible())
             _health.TakeDamage();
 
         if (col.transform.CompareTag("Button"))

@@ -10,6 +10,7 @@ public class EnemyHealth : Health
 
     private void Start()
     {
+        base.Start();
         _score = GameObject.Find("Score").GetComponent<Score>();
     }
 

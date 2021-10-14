@@ -12,6 +12,7 @@ public class BossHealth : Health
 
     private void Start()
     {
+        base.Start();
         _score = GameObject.Find("Score").GetComponent<Score>();
     }
 
@@ -21,6 +22,7 @@ public class BossHealth : Health
         if (life == 0)
             Die();
         _bossManager.BeStronger();
+        TimerInvicibleTime = 0f;
     }
 
     public override void Die()
