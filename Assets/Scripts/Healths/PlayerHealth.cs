@@ -14,8 +14,9 @@ public class PlayerHealth : Health
         base.Start();
     }
 
-    private void Update()
+    private new void Update()
     {
+        base.Update();
         if (transform.position.y <= -11)
             Die();
     }
@@ -26,9 +27,9 @@ public class PlayerHealth : Health
         if (life == 0)
             Die();
         else {
+            TimerInvicibleTime = 0f;
             _bigMario.SetActive(false);
             _smallMario.SetActive(true);
-            TimerInvicibleTime = 0f;
         }
     }
     

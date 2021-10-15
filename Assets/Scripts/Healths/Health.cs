@@ -19,7 +19,7 @@ public abstract class Health : MonoBehaviour
         TimerInvicibleTime = invicibleTime;
     }
 
-    private void Update()   
+    protected void Update()
     {
         if (TimerInvicibleTime < invicibleTime) {
             TimerInvicibleTime += Time.deltaTime;
@@ -36,6 +36,6 @@ public abstract class Health : MonoBehaviour
 
     public bool IsInvicible()
     {
-        return TimerInvicibleTime >= invicibleTime;
+        return TimerInvicibleTime < invicibleTime;
     }
 }
