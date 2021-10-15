@@ -24,7 +24,6 @@ public class Pause : MonoBehaviour
 
     public void RestartButton()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("Game");
     }
 }
