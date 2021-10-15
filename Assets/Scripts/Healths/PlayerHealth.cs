@@ -9,7 +9,7 @@ public class PlayerHealth : Health
     private Sprite _baseSprite;
     private int life = 2;
 
-    private void Start()
+    private new void Start()
     {
         base.Start();
         _baseSprite = _spriteRenderer.sprite;

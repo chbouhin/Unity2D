@@ -8,7 +8,7 @@ public class EnemyHealth : Health
     private Score _score;
     [SerializeField] private int scoreGive = 100;
 
-    private void Start()
+    private new void Start()
     {
         base.Start();
         _score = GameObject.Find("Score").GetComponent<Score>();

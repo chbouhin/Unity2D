@@ -10,7 +10,7 @@ public class BossHealth : Health
     private int scoreGive = 1000;
     private int life = 3;
 
-    private void Start()
+    private new void Start()
     {
         base.Start();
         _score = GameObject.Find("Score").GetComponent<Score>();

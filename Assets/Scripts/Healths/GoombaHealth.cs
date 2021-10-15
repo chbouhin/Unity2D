@@ -9,7 +9,7 @@ public class GoombaHealth : Health
     private Score _score;
     private int scoreGive = 150;
 
-    private void Start()
+    private new void Start()
     {
         base.Start();
         _score = GameObject.Find("Score").GetComponent<Score>();
