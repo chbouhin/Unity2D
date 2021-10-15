@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 { 
-    public float y_pos = 2F;
+    public float y_pos = 1F;
 
     void Update()
     {

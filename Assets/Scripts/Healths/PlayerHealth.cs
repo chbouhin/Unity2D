@@ -14,6 +14,12 @@ public class PlayerHealth : Health
         base.Start();
     }
 
+    private void Update()
+    {
+        if (transform.position.y <= -11)
+            Die();
+    }
+
     public override void TakeDamage()
     {
         life--;
