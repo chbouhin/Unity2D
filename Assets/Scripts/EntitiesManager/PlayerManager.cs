@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private LayerMask _groundLayer;
     private float moveSpeed = 6f;
-    private float jumpForce = 10f;
+    private float jumpForce = 8f;
     private bool isJumping = false;
     private float longJump = 0.5f;
     private float timerLongJump = 0f;
