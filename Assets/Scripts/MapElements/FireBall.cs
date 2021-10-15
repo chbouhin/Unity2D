@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
+    private PlayerHealth _player;
     private Vector3 _directionVector;
     private int moveSpeed = 5;
 
@@ -11,6 +12,7 @@ public class FireBall : MonoBehaviour
     {
         Destroy(gameObject, 10f);
         _directionVector = (GameObject.Find("Player").transform.position - transform.position).normalized;
+        _player = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
     private void Update()
@@ -21,7 +23,7 @@ public class FireBall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player")) {
-            col.gameObject.GetComponent<Health>().TakeDamage();
+            _player.TakeDamage();
             Destroy(gameObject);
         } else if (col.gameObject.CompareTag("Wall")) {
             Destroy(gameObject);
