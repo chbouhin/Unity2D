@@ -1,25 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Others;
 using UnityEngine;
 
-public class Mushroom : MonoBehaviour
+public class Mushroom : Item
 {
     [SerializeField] private Animation _anim;
-    [SerializeField] private int moveSpeed = 3;
+    [SerializeField] private int _moveSpeed = 3;
+    private Vector3 _scale;
+    private bool _goToRight;
+
     [SerializeField] AudioClip _audioPopUp;
     [SerializeField] AudioClip _audioUse;
+    private AudioManager _audioManager;
+
     private PlayerHealth _player;
-    private AudioSource _audio;
-    private bool goToRight;
-    private Vector3 _scale;
     
     private void Start()
     {
         _player = GameObject.Find("Player").GetComponent<PlayerHealth>();
-        _audio = gameObject.GetComponent<AudioSource>();
         _anim.Play("MushroomPopUp");
-        _audio.PlayOneShot(_audioPopUp);
-        goToRight = Random.Range(0, 2) == 0;
+        _goToRight = Random.Range(0, 2) == 0;
         _scale = transform.localScale;
     }
 
@@ -27,8 +28,8 @@ public class Mushroom : MonoBehaviour
     {
         if (!_anim.IsPlaying("MushroomPopUp")) {
             gameObject.GetComponent<Animator>().enabled = false;
-            if (goToRight) {
-                transform.position += transform.right * moveSpeed * Time.deltaTime;
+            if (_goToRight) {
+                transform.position += transform.right * _moveSpeed * Time.deltaTime;
                 if (_scale.x < 1) {
                     _scale.x += Time.deltaTime * 8;
                     if (_scale.x > 1)
@@ -36,7 +37,7 @@ public class Mushroom : MonoBehaviour
                     transform.localScale = _scale;
                 }
             } else {
-                transform.position -= transform.right * moveSpeed * Time.deltaTime;
+                transform.position -= transform.right * _moveSpeed * Time.deltaTime;
                 if (_scale.x > -1) {
                     _scale.x -= Time.deltaTime * 8;
                     if (_scale.x < -1)
@@ -49,15 +50,22 @@ public class Mushroom : MonoBehaviour
 
     public void ChangeDirection()
     {
-        goToRight = !goToRight;
+        _goToRight = !_goToRight;
     }
     
     private void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log(_player);
         if (col.gameObject.CompareTag("Player")) {
             _player.GetBonus();
-            _audio.PlayOneShot(_audioUse);
+            _audioManager.PlaySound(_audioUse);
             Destroy(gameObject);
         }
+    }
+
+    public override void Init(AudioManager manager)
+    {
+        _audioManager = manager;
+        _audioManager.PlaySound(_audioPopUp);
     }
 }
