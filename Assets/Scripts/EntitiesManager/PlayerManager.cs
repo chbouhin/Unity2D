@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private KeyInput _keyInput;
     [SerializeField] private Rigidbody2D _rb2d;
     [SerializeField] private Transform _groundCheck;
+    [SerializeField] private Transform _wallCheck;
     [SerializeField] private LayerMask _groundLayer;
     private float moveSpeed = 6f;
     private float jumpForce = 8f;
@@ -31,12 +32,12 @@ public class PlayerManager : MonoBehaviour
 
     private void Movement()
     {
-        if (Input.GetKey(_keyInput.left)) {
+        if (Input.GetKey(_keyInput.left) && (transform.localScale.x > 0 || !Physics2D.OverlapBox(_wallCheck.position, _wallCheck.localScale, 0, _groundLayer))) {
             transform.position -= transform.right * moveSpeed * Time.deltaTime;
             if (transform.localScale.x > 0)
                 goRight = false;
         }
-        if (Input.GetKey(_keyInput.right)) {
+        if (Input.GetKey(_keyInput.right) && (transform.localScale.x < 0 || !Physics2D.OverlapBox(_wallCheck.position, _wallCheck.localScale, 0, _groundLayer))) {
             transform.position += transform.right * moveSpeed * Time.deltaTime;
             if (transform.localScale.x < 0)
                 goRight = true;
