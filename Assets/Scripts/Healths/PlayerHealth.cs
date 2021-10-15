@@ -5,14 +5,13 @@ using UnityEngine;
 public class PlayerHealth : Health
 {
     [SerializeField] private GameManager _gameManager;
-    [SerializeField] private Sprite _smallSprite;
-    private Sprite _baseSprite;
+    [SerializeField] private GameObject _bigMario;
+    [SerializeField] private GameObject _smallMario;
     private int life = 2;
 
     private new void Start()
     {
         base.Start();
-        _baseSprite = _spriteRenderer.sprite;
     }
 
     public override void TakeDamage()
@@ -20,16 +19,19 @@ public class PlayerHealth : Health
         life--;
         if (life == 0)
             Die();
-        _spriteRenderer.sprite = _smallSprite;
-        TimerInvicibleTime = 0f;
+        else {
+            _bigMario.SetActive(false);
+            _smallMario.SetActive(true);
+            TimerInvicibleTime = 0f;
+        }
     }
     
     public void GetBonus()
     {
-        print("Test");
         if (life == 1) {
             life++;
-            _spriteRenderer.sprite = _baseSprite;
+            _bigMario.SetActive(true);
+            _smallMario.SetActive(false);
         }
     }
 
