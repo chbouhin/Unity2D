@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text _textTaskFinishGame;
     [SerializeField] private Text _textUIPause;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(_keyInput.pause))
