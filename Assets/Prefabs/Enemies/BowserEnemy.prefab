@@ -65,6 +65,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowserEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8470921539911671670, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8470921539911671674, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_Sprite
       value: 
