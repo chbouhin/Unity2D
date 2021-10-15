@@ -85,6 +85,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6976131690474896277, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976131690474896277, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5038689133124598545, guid: 7f5bf0491bedc4591b2479e6b219f905, type: 3}
@@ -111,6 +115,14 @@ PrefabInstance:
     - target: {fileID: 6976131690474896281, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
       propertyPath: m_Name
       value: Koopa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487464235717708638, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
+      propertyPath: m_Size.y
+      value: 1.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8487464235717708638, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 8487464235717708638, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
