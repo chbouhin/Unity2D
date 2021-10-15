@@ -26,6 +26,7 @@ public class PlayerHealth : Health
     
     public void GetBonus()
     {
+        print("Test");
         if (life == 1) {
             life++;
             _spriteRenderer.sprite = _baseSprite;
