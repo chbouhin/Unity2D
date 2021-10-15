@@ -57,12 +57,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    void OnDrawGizmos()
-    {
-        // Draw a semitransparent blue cube at the transforms position
-        Gizmos.DrawCube(_wallCheck.position, _wallCheck.localScale);
-    }
-
     private void TryJumping()
     {
         if (Input.GetKey(_keyInput.jump)) {
