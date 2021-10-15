@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1369401386238430557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2222277157306786954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8666f6f374a332e4fb995e2b49f7492e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 2222277157306786950}
-  _bossManager: {fileID: 5859661507526350982}
---- !u!114 &5859661507526350982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2222277157306786954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f22c0340616ce489f7f6bfc477da2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _leftPointMov: {fileID: 0}
-  _rightPointMov: {fileID: 0}
-  _fireBall: {fileID: 429735994451216895, guid: 6be646b6777d2ff4db0492f1ae980597, type: 3}
-  _spawnEnemy: {fileID: 1335919670853551932, guid: 3c0da3447a6932e4b844940577f91766, type: 3}
 --- !u!60 &5973259603152686061
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -62,6 +32,55 @@ PolygonCollider2D:
       - {x: 1, y: -1}
       - {x: 1, y: 0.375}
       - {x: 0.375, y: 1}
+--- !u!95 &-3066719735274671294
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222277157306786954}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18b894754ef094827886be8370abbe63, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1369401386238430557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222277157306786954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8666f6f374a332e4fb995e2b49f7492e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 2222277157306786950}
+  _bossManager: {fileID: 5859661507526350982}
+--- !u!114 &5859661507526350982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222277157306786954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f22c0340616ce489f7f6bfc477da2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leftPointMov: {fileID: 0}
+  _rightPointMov: {fileID: 0}
+  _fireBall: {fileID: 429735994451216895, guid: 6be646b6777d2ff4db0492f1ae980597, type: 3}
+  _spawnEnemy: {fileID: 1335919670853551932, guid: 3c0da3447a6932e4b844940577f91766, type: 3}
 --- !u!1001 &7735459088676404220
 PrefabInstance:
   m_ObjectHideFlags: 0
