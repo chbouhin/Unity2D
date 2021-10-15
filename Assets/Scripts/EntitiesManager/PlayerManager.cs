@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     private float longJump = 0.5f;
     private float timerLongJump = 0f;
     private Vector3 _scale;
+    private bool goRight = true;
 
     private void Start()
     {
@@ -32,17 +33,26 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKey(_keyInput.left)) {
             transform.position -= transform.right * moveSpeed * Time.deltaTime;
-            if (transform.localScale.x > 0) {
-                _scale.x = -1;
-                transform.localScale = _scale;
-            }
+            if (transform.localScale.x > 0)
+                goRight = false;
         }
         if (Input.GetKey(_keyInput.right)) {
             transform.position += transform.right * moveSpeed * Time.deltaTime;
-            if (transform.localScale.x < 0) {
-                _scale.x = 1;
+            if (transform.localScale.x < 0)
+                goRight = true;
+        }
+        if (goRight) {
+            if (_scale.x < 1) {
+                _scale.x += Time.deltaTime * 8;
+                if (_scale.x > 1)
+                    _scale.x = 1;
                 transform.localScale = _scale;
             }
+        } else if (_scale.x > -1) {
+            _scale.x -= Time.deltaTime * 8;
+            if (_scale.x < -1)
+                _scale.x = -1;
+            transform.localScale = _scale;
         }
     }
 
