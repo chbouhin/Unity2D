@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1835335133162071788}
   - component: {fileID: 3297929519129057395}
   m_Layer: 0
-  m_Name: InvicibleWall
+  m_Name: InvisibleWall
   m_TagString: InvisibleWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
