@@ -10,7 +10,8 @@ public class Mushroom : MonoBehaviour
     [SerializeField] AudioClip _audioUse;
     private PlayerHealth _player;
     private AudioSource _audio;
-    private int direction;
+    private bool goToRight;
+    private Vector3 _scale;
     
     private void Start()
     {
@@ -18,23 +19,37 @@ public class Mushroom : MonoBehaviour
         _audio = gameObject.GetComponent<AudioSource>();
         _anim.Play("MushroomPopUp");
         _audio.PlayOneShot(_audioPopUp);
-        direction = Random.Range(1, 3);
+        goToRight = Random.Range(0, 2) == 0;
+        _scale = transform.localScale;
     }
 
     private void Update()
     {
         if (!_anim.IsPlaying("MushroomPopUp")) {
             gameObject.GetComponent<Animator>().enabled = false;
-            if (direction == 1)
+            if (goToRight) {
                 transform.position += transform.right * moveSpeed * Time.deltaTime;
-            else
+                if (_scale.x < 1) {
+                    _scale.x += Time.deltaTime * 8;
+                    if (_scale.x > 1)
+                        _scale.x = 1;
+                    transform.localScale = _scale;
+                }
+            } else {
                 transform.position -= transform.right * moveSpeed * Time.deltaTime;
+                if (_scale.x > -1) {
+                    _scale.x -= Time.deltaTime * 8;
+                    if (_scale.x < -1)
+                        _scale.x = -1;
+                    transform.localScale = _scale;
+                }
+            }
         }
     }
 
     public void ChangeDirection()
     {
-        direction = direction == 1 ? 2 : 1;
+        goToRight = !goToRight;
     }
     
     private void OnCollisionEnter2D(Collision2D col)
