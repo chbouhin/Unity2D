@@ -31,6 +31,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df42d829f5391bf43854b5a81a5084cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 0}
   _toInvoke: {fileID: 8448919516001779811, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
 --- !u!1001 &8239917243152415909
 PrefabInstance:
@@ -107,6 +108,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6976131690474896277, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976131690474896277, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a414b0575c5c44d88565ed11f70f5d6, type: 2}
     - target: {fileID: 6976131690474896281, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
       propertyPath: m_Name
       value: BigGoomba

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cc9a1bd01aca8489a7d1d0c7409468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 0}
   scoreGive: 100
-  life: 1
 --- !u!1001 &3049634600001098252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65,6 +65,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6976131690474896277, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976131690474896277, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a414b0575c5c44d88565ed11f70f5d6, type: 2}
     - target: {fileID: 6976131690474896281, guid: 61b513eb56725d1419ddb28711740e1e, type: 3}
       propertyPath: m_Name
       value: Koopa

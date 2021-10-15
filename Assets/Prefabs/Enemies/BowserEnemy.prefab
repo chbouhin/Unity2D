@@ -85,6 +85,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8470921539911671674, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470921539911671674, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a414b0575c5c44d88565ed11f70f5d6, type: 2}
     - target: {fileID: 8470921539911671677, guid: 46ec9937574a15d4c9a65cf375fb9377, type: 3}
       propertyPath: m_RootOrder
       value: 0
