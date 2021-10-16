@@ -774,6 +774,10 @@ PrefabInstance:
       propertyPath: audioManagerObject
       value: 
       objectReference: {fileID: 475705190}
+    - target: {fileID: 3047113584556072776, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 475705190}
     - target: {fileID: 6719254311034269865, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1403,6 +1407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4e87ae457cdd34c90f0f412c03a1a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioManagerObject: {fileID: 475705190}
+  _stageMusic: {fileID: 8300000, guid: f29f7d3995d8e8f41990e0e207c6eb3b, type: 3}
+  _bossMusic: {fileID: 8300000, guid: 6acd8b1884c4f214daeaed233c70eb58, type: 3}
   _keyInput: {fileID: 1309723714}
   _score: {fileID: 2024686444}
   _timer: {fileID: 1758283319}
@@ -1683,6 +1690,10 @@ PrefabInstance:
       propertyPath: audioManagerObject
       value: 
       objectReference: {fileID: 475705190}
+    - target: {fileID: 3047113584556072776, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 475705190}
     - target: {fileID: 6719254311034269865, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1769,6 +1780,7 @@ MonoBehaviour:
   _keyInput: {fileID: 1309723714}
   _rb2d: {fileID: 1581654832}
   _groundCheck: {fileID: 974930472}
+  _wallCheck: {fileID: 0}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -1786,7 +1798,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1581654834}
   _gameManager: {fileID: 1309723715}
-  _smallSprite: {fileID: -6128527215277702658, guid: c5828656afdd84a5fb46a19d850bd254, type: 3}
+  _bigMario: {fileID: 0}
+  _smallMario: {fileID: 0}
 --- !u!50 &1581654832
 Rigidbody2D:
   serializedVersion: 4
@@ -1882,7 +1895,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1581654835
@@ -1893,7 +1906,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581654829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.04, y: 1, z: 0}
+  m_LocalPosition: {x: -1.24, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1182865054}
@@ -2406,6 +2419,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6990121301105680173, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
       propertyPath: audioManagerObject
+      value: 
+      objectReference: {fileID: 475705190}
+    - target: {fileID: -6990121301105680173, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
+      propertyPath: _audioManagerObject
       value: 
       objectReference: {fileID: 475705190}
     - target: {fileID: -3712305174239305235, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}

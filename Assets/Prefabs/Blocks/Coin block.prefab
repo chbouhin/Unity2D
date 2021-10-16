@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5bb48a77cd35a74f88a23dd8d43ff8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManagerObject: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: c2d9d5d0a5958064682516e4f56de688, type: 3}
-  bonusItem: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
-  usedSprite: {fileID: -5055118836324436979, guid: 2aac40b720fae4cbcb87008cff1a3923, type: 3}
+  _audioManagerObject: {fileID: 0}
+  _hitSound: {fileID: 8300000, guid: c2d9d5d0a5958064682516e4f56de688, type: 3}
+  _bonusItem: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+  _usedSprite: {fileID: -5055118836324436979, guid: 2aac40b720fae4cbcb87008cff1a3923, type: 3}
 --- !u!212 &6719254311034269866
 SpriteRenderer:
   m_ObjectHideFlags: 0

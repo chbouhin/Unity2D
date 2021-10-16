@@ -6,13 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public void EscapeButton()
+    [SerializeField] private AudioClip _pauseSound;
+    private AudioManager _audioManager;
+    
+    public void EscapeButton(AudioManager manager)
     {
+        _audioManager = manager;
         if (gameObject.activeSelf) {
             ContinueButton();
         } else {
             gameObject.SetActive(true);
             Time.timeScale = 0f;
+            _audioManager.PauseMusic();
+            _audioManager.PlaySound(_pauseSound);
         }
     }
 
@@ -20,6 +26,7 @@ public class Pause : MonoBehaviour
     {
         gameObject.SetActive(false);
         Time.timeScale = 1f;
+        _audioManager.ResumeMusic();
     }
 
     public void RestartButton()

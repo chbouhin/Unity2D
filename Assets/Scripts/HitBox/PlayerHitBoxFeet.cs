@@ -8,8 +8,8 @@ public class PlayerHitBoxFeet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.CompareTag("Enemy") && _playerManager.IsFalling() && col.name != "Bowser") {
-            col.gameObject.GetComponent<Health>().TakeDamage();
+        if (col.transform.CompareTag("EnemyHead") && col.name != "Bowser") {
+            col.gameObject.transform.parent.GetComponent<Health>().TakeDamage();
             _playerManager.Jump();
         }
     }

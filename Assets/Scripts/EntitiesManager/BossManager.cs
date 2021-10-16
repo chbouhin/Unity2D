@@ -8,6 +8,7 @@ public class BossManager : MonoBehaviour
     [SerializeField] private Transform _rightPointMov;
     [SerializeField] private GameObject _fireBall;
     [SerializeField] private GameObject _spawnEnemy;
+    private Transform _player;
     private float cooldownFireball = 7f;
     private float timerCooldownFireball = 0f;
     private float cooldownSpawnEnemy = 15f;
@@ -15,7 +16,18 @@ public class BossManager : MonoBehaviour
     private float moveSpeed = 2f;
     private bool goToRight = false;
 
+    private void Start()
+    {
+        _player = GameObject.Find("Player").transform;
+    }
+
     private void Update()
+    {
+        if (_player.position.x > 10)
+            FightBossStart();
+    }
+
+    private void FightBossStart()
     {
         if (goToRight) {
             transform.position += transform.right * moveSpeed * Time.deltaTime;
@@ -46,7 +58,7 @@ public class BossManager : MonoBehaviour
             timerCooldownSpawnEnemy += Time.deltaTime;
         } else {
             Rigidbody2D rb2D = Instantiate(_spawnEnemy, transform.position + new Vector3(-3, 3, 0), Quaternion.identity).GetComponent<Rigidbody2D>();
-            rb2D.velocity = new Vector2(-3, 3);
+            rb2D.velocity = new Vector2(-1, 1);
             timerCooldownSpawnEnemy -= cooldownSpawnEnemy;
         }
     }

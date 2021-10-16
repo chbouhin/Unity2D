@@ -6,6 +6,11 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private GameObject _audioManagerObject;
+    [SerializeField] private AudioClip _stageMusic;
+    [SerializeField] private AudioClip _bossMusic;
+    private AudioManager _audioManager;
+    
     [SerializeField] private KeyInput _keyInput;
     [SerializeField] private Score _score;
     [SerializeField] private Timer _timer;
@@ -16,13 +21,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        _audioManager = _audioManagerObject.GetComponent<AudioManager>();
+        _audioManager.PlayMusic(_stageMusic);
         Time.timeScale = 1f;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(_keyInput.pause))
-            _pause.EscapeButton();
+            _pause.EscapeButton(_audioManager);
     }
 
 
