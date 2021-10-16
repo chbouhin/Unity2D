@@ -10,7 +10,7 @@ public class PlayerHitBoxFeet : MonoBehaviour
     {
         if (col.transform.CompareTag("EnemyHead") && col.name != "Bowser") {
             col.gameObject.transform.parent.GetComponent<Health>().TakeDamage();
-            _playerManager.Jump();
+            _playerManager.Jump(false);
         }
     }
 }

@@ -8,6 +8,10 @@ public class BossManager : MonoBehaviour
     [SerializeField] private Transform _rightPointMov;
     [SerializeField] private GameObject _fireBall;
     [SerializeField] private GameObject _spawnEnemy;
+    [SerializeField] private AudioClip _bossMusic;
+    [SerializeField] private AudioClip _fireballSound;
+    private AudioManager _audioManager;
+    private bool _bossMusicPlaying;
     private Transform _player;
     private float cooldownFireball = 7f;
     private float timerCooldownFireball = 0f;
@@ -18,13 +22,22 @@ public class BossManager : MonoBehaviour
 
     private void Start()
     {
+        _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         _player = GameObject.Find("Player").transform;
     }
 
     private void Update()
     {
-        if (_player.position.x > 10)
+        if (_player.position.x > 333)
+        {
             FightBossStart();
+            if (!_bossMusicPlaying)
+            {
+                _bossMusicPlaying = true;
+                _audioManager.StopMusic();
+                _audioManager.PlayMusic(_bossMusic);
+            }
+        }
     }
 
     private void FightBossStart()
@@ -47,6 +60,7 @@ public class BossManager : MonoBehaviour
         if (timerCooldownFireball < cooldownFireball) {
             timerCooldownFireball += Time.deltaTime;
         } else {
+            _audioManager.PlaySound(_fireballSound);
             Instantiate(_fireBall, transform.position, Quaternion.identity);
             timerCooldownFireball -= cooldownFireball;
         }

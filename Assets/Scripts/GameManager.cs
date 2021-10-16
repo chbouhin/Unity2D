@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _audioManagerObject;
     [SerializeField] private AudioClip _stageMusic;
-    [SerializeField] private AudioClip _bossMusic;
     private AudioManager _audioManager;
     
     [SerializeField] private KeyInput _keyInput;

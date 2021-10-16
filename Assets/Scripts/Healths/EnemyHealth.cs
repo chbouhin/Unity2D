@@ -5,17 +5,21 @@ using UnityEngine.UI;
 
 public class EnemyHealth : Health
 {
-    private Score _score;
     [SerializeField] private int scoreGive = 100;
+    [SerializeField] private AudioClip _stompSound;
+    private Score _score;
+    private AudioManager _audioManager;
 
     private new void Start()
     {
         base.Start();
+        _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         _score = GameObject.Find("Score").GetComponent<Score>();
     }
 
     public override void TakeDamage()
     {
+        _audioManager.PlaySound(_stompSound);
         Die();
     }
 

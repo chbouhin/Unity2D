@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1873339224}
     m_Modifications:
+    - target: {fileID: 3047113584556072776, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 6719254311034269865, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -192,6 +196,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -470,6 +478,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -24902,6 +24914,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -25038,6 +25054,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: 274886666272759223, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 5368933203054143893, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
       propertyPath: m_Name
       value: Koopa
@@ -25100,6 +25120,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -25162,6 +25186,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: 274886666272759223, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 5368933203054143893, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
       propertyPath: m_Name
       value: Koopa (5)
@@ -25475,9 +25503,17 @@ PrefabInstance:
       value: BowserEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 5859661507526350982, guid: 3a3884e1a878ff04b8b9deaaf909e795, type: 3}
+      propertyPath: _bossMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 6acd8b1884c4f214daeaed233c70eb58, type: 3}
+    - target: {fileID: 5859661507526350982, guid: 3a3884e1a878ff04b8b9deaaf909e795, type: 3}
       propertyPath: _leftPointMov
       value: 
       objectReference: {fileID: 871199157}
+    - target: {fileID: 5859661507526350982, guid: 3a3884e1a878ff04b8b9deaaf909e795, type: 3}
+      propertyPath: _fireballSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 2fe27112350049e469688424c8a384ab, type: 3}
     - target: {fileID: 5859661507526350982, guid: 3a3884e1a878ff04b8b9deaaf909e795, type: 3}
       propertyPath: _rightPointMov
       value: 
@@ -25553,6 +25589,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: -689746524710284006, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 8448919516001779811, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
       propertyPath: m_Name
       value: Goomba
@@ -26030,6 +26070,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: -689746524710284006, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 8448919516001779811, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
       propertyPath: m_Name
       value: Goomba
@@ -26159,6 +26203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: -689746524710284006, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 8448919516001779811, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
       propertyPath: m_Name
       value: Goomba (1)
@@ -70204,9 +70252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4e87ae457cdd34c90f0f412c03a1a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioManagerObject: {fileID: 0}
-  _stageMusic: {fileID: 0}
-  _bossMusic: {fileID: 0}
+  _audioManagerObject: {fileID: 920515244}
+  _stageMusic: {fileID: 8300000, guid: f29f7d3995d8e8f41990e0e207c6eb3b, type: 3}
   _keyInput: {fileID: 686751487}
   _score: {fileID: 1108976544}
   _timer: {fileID: 1999968112}
@@ -70247,6 +70294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: 274886666272759223, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 5368933203054143893, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
       propertyPath: m_Name
       value: Koopa
@@ -70335,6 +70386,8 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  _audioManagerObject: {fileID: 920515244}
+  _jumpSound: {fileID: 8300000, guid: cf98657e6a37cdb47acbd032a798c92e, type: 3}
 --- !u!114 &757120248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70351,6 +70404,7 @@ MonoBehaviour:
   _gameManager: {fileID: 686751488}
   _bigMario: {fileID: 143203650}
   _smallMario: {fileID: 1056393032}
+  _shrinkSound: {fileID: 8300000, guid: 4a6663e15c6b3194caa45d9b884d49cd, type: 3}
 --- !u!50 &757120249
 Rigidbody2D:
   serializedVersion: 4
@@ -70380,7 +70434,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757120246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: -3.13, z: 0}
+  m_LocalPosition: {x: 0, y: -3.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1576944176}
@@ -70586,6 +70640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigGoomba
       objectReference: {fileID: 0}
+    - target: {fileID: 6331537267091911345, guid: 3c0da3447a6932e4b844940577f91766, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0da3447a6932e4b844940577f91766, type: 3}
 --- !u!1001 &870596195
@@ -70595,6 +70653,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1873339224}
     m_Modifications:
+    - target: {fileID: -6990121301105680173, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: -3712305174239305235, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -70719,6 +70781,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1873339224}
     m_Modifications:
+    - target: {fileID: -6990121301105680173, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: -3712305174239305235, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -70831,6 +70897,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5cd2b17d287a5240949054f90cade97, type: 3}
+--- !u!1001 &920515243
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1846367493201524243, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846367493201524255, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+--- !u!1 &920515244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1846367493201524243, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
+  m_PrefabInstance: {fileID: 920515243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &960065479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70900,6 +71028,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin (1)
@@ -71088,6 +71220,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1873339224}
     m_Modifications:
+    - target: {fileID: -6990121301105680173, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: -3712305174239305235, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -71552,6 +71688,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1873339224}
     m_Modifications:
+    - target: {fileID: 3047113584556072776, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 6719254311034269865, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -71609,6 +71749,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -71676,6 +71820,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1873339224}
     m_Modifications:
+    - target: {fileID: -6990121301105680173, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: -3712305174239305235, guid: 2a16f6c5f91c375449124e1f5ba2954e, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -72002,7 +72150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a691861c672ad47af33012993dc4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pauseSound: {fileID: 0}
+  _pauseSound: {fileID: 8300000, guid: 9e0da2683bb71234a8830b6878419835, type: 3}
 --- !u!1 &1330363902
 GameObject:
   m_ObjectHideFlags: 0
@@ -97987,6 +98135,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: 274886666272759223, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 5368933203054143893, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
       propertyPath: m_Name
       value: Koopa (1)
@@ -98049,6 +98201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin (2)
@@ -98232,6 +98388,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: 274886666272759223, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 5368933203054143893, guid: b501aad270bbccc40883855bd5d7515a, type: 3}
       propertyPath: m_Name
       value: Koopa
@@ -98289,6 +98449,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1873339224}
     m_Modifications:
+    - target: {fileID: 3047113584556072776, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 6719254311034269865, guid: a69f7283769731346bbd4c93b09e6632, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -98567,6 +98731,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin (1)
@@ -98624,6 +98792,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin (1)
@@ -98904,6 +99076,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin (2)
@@ -99415,6 +99591,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 842969922}
     m_Modifications:
+    - target: {fileID: -689746524710284006, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
+      propertyPath: _stompSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
     - target: {fileID: 8448919516001779811, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
       propertyPath: m_Name
       value: Goomba
@@ -99957,6 +100137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerHealth: {fileID: 0}
   _textTimer: {fileID: 1999968110}
+  _hurryMusic: {fileID: 8300000, guid: 984f99e594f2cb8439affb8ffa3841d7, type: 3}
+  _hurrySound: {fileID: 8300000, guid: 5a6529b33a1f56d4cb547b357b31f3ee, type: 3}
   timer: 100
 --- !u!1001 &2015819355
 PrefabInstance:
@@ -99965,6 +100147,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin (1)
@@ -100027,6 +100213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1281819166}
     m_Modifications:
+    - target: {fileID: -4476718512833564015, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
+      propertyPath: _audioManagerObject
+      value: 
+      objectReference: {fileID: 920515244}
     - target: {fileID: 2001660238797500429, guid: 31f6b614d8a004f4f9aa67419679c6d5, type: 3}
       propertyPath: m_Name
       value: Coin

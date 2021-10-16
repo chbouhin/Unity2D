@@ -989,7 +989,7 @@ RectTransform:
   - {fileID: 1394799026}
   - {fileID: 764017264}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.088}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1129,6 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a691861c672ad47af33012993dc4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pauseSound: {fileID: 0}
 --- !u!114 &764017266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,90 +1348,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 1.2}
   m_EdgeRadius: 0
---- !u!1 &1309723712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1309723716}
-  - component: {fileID: 1309723715}
-  - component: {fileID: 1309723713}
-  - component: {fileID: 1309723714}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1309723713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309723712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708ee68e61499844c9ab269e024093bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1309723714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309723712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e3de665493bdf469f16c9a64b6495e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  savePath: 
-  jump: 0
-  left: 0
-  right: 0
-  pause: 0
---- !u!114 &1309723715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309723712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4e87ae457cdd34c90f0f412c03a1a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioManagerObject: {fileID: 475705190}
-  _stageMusic: {fileID: 8300000, guid: f29f7d3995d8e8f41990e0e207c6eb3b, type: 3}
-  _bossMusic: {fileID: 8300000, guid: 6acd8b1884c4f214daeaed233c70eb58, type: 3}
-  _keyInput: {fileID: 1309723714}
-  _score: {fileID: 2024686444}
-  _timer: {fileID: 1758283319}
-  _continue: {fileID: 59217856}
-  _pause: {fileID: 764017265}
-  _textTaskFinishGame: {fileID: 1157763852}
-  _textUIPause: {fileID: 1913667926}
---- !u!4 &1309723716
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309723712}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 549.666, y: 227.11906, z: -59.937653}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1357839335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,13 +1694,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857a5be62f24fc54eb9fa5827d4d1055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keyInput: {fileID: 1309723714}
+  _keyInput: {fileID: 0}
   _rb2d: {fileID: 1581654832}
   _groundCheck: {fileID: 974930472}
   _wallCheck: {fileID: 0}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  _audioManagerObject: {fileID: 0}
+  _jumpSound: {fileID: 0}
 --- !u!114 &1581654831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,7 +1716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 1581654834}
-  _gameManager: {fileID: 1309723715}
+  _gameManager: {fileID: 0}
   _bigMario: {fileID: 0}
   _smallMario: {fileID: 0}
 --- !u!50 &1581654832
@@ -1906,7 +1825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581654829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.24, y: 1, z: 0}
+  m_LocalPosition: {x: -2.02, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1182865054}
@@ -2093,7 +2012,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1309723713}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneUpdate, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5

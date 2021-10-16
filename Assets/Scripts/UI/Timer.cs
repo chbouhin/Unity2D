@@ -8,10 +8,15 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] private Health _playerHealth;
     [SerializeField] private Text _textTimer;
+    [SerializeField] private AudioClip _hurryMusic;
+    [SerializeField] private AudioClip _hurrySound;
+    private AudioManager _audioManager;
     public float timer;
+    private bool _hurry = false;
 
     private void Start()
     {
+        _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         _textTimer.text = "Timer : " + timer;
     }
 
@@ -24,6 +29,14 @@ public class Timer : MonoBehaviour
                 _textTimer.color = Color.red;
         } else
             _playerHealth.Die();
+
+        if (timer < 40 && !_hurry)
+        {
+            _hurry = true;
+            _audioManager.StopMusic();
+            _audioManager.PlaySound(_hurrySound);
+            _audioManager.PlayDelayedMusic(_hurryMusic, _hurrySound.length);
+        }
     }
 
     private string FormatTime(float time)

@@ -33,6 +33,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
   _toInvoke: {fileID: 8448919516001779811, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
+  _stompSound: {fileID: 8300000, guid: e0b3d75e501a3cf49ab4f72986aaf32b, type: 3}
 --- !u!1001 &8239917243152415909
 PrefabInstance:
   m_ObjectHideFlags: 0

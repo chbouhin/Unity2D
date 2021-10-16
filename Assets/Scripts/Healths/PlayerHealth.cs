@@ -7,10 +7,13 @@ public class PlayerHealth : Health
     [SerializeField] private GameManager _gameManager;
     [SerializeField] private GameObject _bigMario;
     [SerializeField] private GameObject _smallMario;
+    [SerializeField] private AudioClip _shrinkSound;
+    private AudioManager _audioManager;
     private int life = 2;
 
     private new void Start()
     {
+        _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         base.Start();
     }
 
@@ -30,6 +33,7 @@ public class PlayerHealth : Health
             TimerInvicibleTime = 0f;
             _bigMario.SetActive(false);
             _smallMario.SetActive(true);
+            _audioManager.PlaySound(_shrinkSound);
         }
     }
     

@@ -9,6 +9,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private Transform _wallCheck;
     [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private GameObject _audioManagerObject;
+    [SerializeField] private AudioClip _jumpSound;
+    private AudioManager _audioManager;
     private float moveSpeed = 6f;
     private float jumpForce = 8f;
     private bool isJumping = false;
@@ -19,6 +22,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        _audioManager = _audioManagerObject.GetComponent<AudioManager>();
         _scale = transform.localScale;
     }
 
@@ -84,8 +88,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void Jump()
+    public void Jump(bool playSound = true)
     {
+        if (playSound) 
+            _audioManager.PlaySound(_jumpSound);
         _rb2d.velocity = new Vector2(0, jumpForce);
         isJumping = true;
     }
