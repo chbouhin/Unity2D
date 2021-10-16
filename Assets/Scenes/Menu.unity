@@ -349,7 +349,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &179581585
 GameObject:
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1091050392}
+      - m_Target: {fileID: 673367074}
         m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: HideOptions
         m_Mode: 1
@@ -1334,7 +1334,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &391738998
 GameObject:
@@ -1611,7 +1611,7 @@ Transform:
   - {fileID: 677880820}
   - {fileID: 2045905094}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492208066
 GameObject:
@@ -1705,7 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8448919516001779816, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8448919516001779816, guid: c4306800b8b3efc408b33d9dacd55ecc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1831,6 +1831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 673367075}
+  - component: {fileID: 673367074}
   - component: {fileID: 673367073}
   - component: {fileID: 673367072}
   m_Layer: 0
@@ -1877,6 +1878,21 @@ MonoBehaviour:
   left: 0
   right: 0
   pause: 0
+--- !u!114 &673367074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673367071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9e02ac49f3f404ea27835bb8197d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UI: {fileID: 267984366}
+  _options: {fileID: 338740811}
+  _textButtonOpt: {fileID: 673367072}
 --- !u!4 &673367075
 Transform:
   m_ObjectHideFlags: 0
@@ -2880,7 +2896,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1091050392}
+      - m_Target: {fileID: 673367074}
         m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: ShowOptions
         m_Mode: 1
@@ -3732,7 +3748,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1091050391}
   - component: {fileID: 1091050390}
-  - component: {fileID: 1091050392}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -3768,21 +3783,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1091050392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091050389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9e02ac49f3f404ea27835bb8197d9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _UI: {fileID: 267984366}
-  _options: {fileID: 338740811}
-  _textButtonOpt: {fileID: 673367072}
 --- !u!1001 &1161633641
 PrefabInstance:
   m_ObjectHideFlags: 0

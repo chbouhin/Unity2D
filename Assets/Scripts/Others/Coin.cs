@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class Coin : Item
 {
-    [SerializeField] private GameObject _audioManagerObject;
     [SerializeField] private Animation _anim;
-    private Score _score;
-    
-    private AudioManager _audioManager;
     [SerializeField] AudioClip _audioCoin;
+    private AudioManager _audioManager;
+    private TaskCoins _taskCoins;
+    private Score _score;
     
     private void Start()
     {
-        _audioManager = _audioManagerObject.GetComponent<AudioManager>();
+        _audioManager =  GameObject.Find("AudioManager").GetComponent<AudioManager>();
         _score = GameObject.Find("Score").GetComponent<Score>();
+        _taskCoins = GameObject.Find("CoinsTask").GetComponent<TaskCoins>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -33,7 +33,8 @@ public class Coin : Item
 
     private void Use(float timer)
     {
-        //_score.AddScore(50);
+        _score.AddScore(50);
+        _taskCoins.AddCoin();
         _audioManager.PlaySound(_audioCoin);
         Destroy(gameObject, timer);
     }

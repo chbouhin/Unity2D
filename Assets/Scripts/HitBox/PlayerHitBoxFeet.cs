@@ -12,5 +12,6 @@ public class PlayerHitBoxFeet : MonoBehaviour
             col.gameObject.transform.parent.GetComponent<Health>().TakeDamage();
             _playerManager.Jump(false);
         }
+        print(col.gameObject.name);
     }
 }

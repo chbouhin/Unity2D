@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Timer _timer;
     [SerializeField] private Button _continue;
     [SerializeField] private PauseManager _pause;
-    [SerializeField] private Text _textTaskFinishGame;
     [SerializeField] private Text _textUIPause;
 
     private void Start()
@@ -23,7 +22,6 @@ public class GameManager : MonoBehaviour
         _audioManager = _audioManagerObject.GetComponent<AudioManager>();
         _audioManager.PlayMusic(_stageMusic);
         Time.timeScale = 1f;
-        print("start");
     }
 
     private void Update()
@@ -36,7 +34,6 @@ public class GameManager : MonoBehaviour
     public void LooseGame()
     {
         Time.timeScale = 0f;
-        print("loose");
         _textUIPause.text = "Defeat";
         _textUIPause.color = Color.red;
         _pause.gameObject.SetActive(true);
@@ -46,12 +43,10 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         Time.timeScale = 0f;
-        print("win");
         _textUIPause.text = "Victory";
         _textUIPause.color = Color.green;
         _continue.interactable = false;
         _score.AddScore((int) (_timer.timer * 10));
         _pause.gameObject.SetActive(true);
-        _textTaskFinishGame.color = Color.green;
     }
 }
