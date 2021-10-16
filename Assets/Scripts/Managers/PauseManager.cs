@@ -12,9 +12,9 @@ public class PauseManager : MonoBehaviour
     public void EscapeButton(AudioManager manager)
     {
         _audioManager = manager;
-        if (gameObject.activeSelf) {
+        if (gameObject.activeInHierarchy) {
             ContinueButton();
-        } else {
+        } else if (!gameObject.activeSelf) {
             gameObject.SetActive(true);
             Time.timeScale = 0f;
             _audioManager.PauseMusic();
