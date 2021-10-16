@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Others;
 using UnityEngine;
 
 public class Mushroom : Item
@@ -55,7 +54,6 @@ public class Mushroom : Item
     
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log(_player);
         if (col.gameObject.CompareTag("Player")) {
             _player.GetBonus();
             _audioManager.PlaySound(_audioUse);

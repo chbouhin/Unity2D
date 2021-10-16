@@ -1,23 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Others;
 using UnityEngine;
 
 public class Bonus_block : MonoBehaviour
 {
-    [SerializeField] private GameObject audioManagerObject;
-    [SerializeField] private AudioClip hitSound;
-    private AudioManager audioManager;
+    [SerializeField] private GameObject _audioManagerObject;
+    [SerializeField] private AudioClip _hitSound;
+    private AudioManager _audioManager;
     
-    [SerializeField] private Item bonusItem;
-    [SerializeField] private Sprite usedSprite;
-    private bool used = false;
+    [SerializeField] private Item _bonusItem;
+    [SerializeField] private Sprite _usedSprite;
+    private bool _used = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        audioManager = audioManagerObject.GetComponent<AudioManager>();
+        _audioManager = _audioManagerObject.GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -35,16 +34,16 @@ public class Bonus_block : MonoBehaviour
     {
         var parent = gameObject.transform;
 
-        if (used)
+        if (_used)
             return;
-        audioManager.PlaySound(hitSound);
-        var item = Instantiate(bonusItem);
+        _audioManager.PlaySound(_hitSound);
+        var item = Instantiate(_bonusItem);
         item.transform.parent = parent;
-        item.Init(audioManager);
+        item.Init(_audioManager);
         item.transform.position = parent.position + new Vector3(0, 0, 1);
-        used = true;
+        _used = true;
 
         gameObject.GetComponent<Animator>().enabled = false;
-        GetComponent<SpriteRenderer>().sprite = usedSprite;
+        GetComponent<SpriteRenderer>().sprite = _usedSprite;
     }
 }
