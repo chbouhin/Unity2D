@@ -24,4 +24,14 @@ public class AudioManager : MonoBehaviour
         _music.PlayOneShot(clip);
         _music.loop = true;
     }
+
+    public void PauseMusic()
+    {
+        _music.Pause();
+    }
+
+    public void ResumeMusic()
+    {
+        _music.UnPause();
+    }
 }
