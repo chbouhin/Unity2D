@@ -39080,7 +39080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857a5be62f24fc54eb9fa5827d4d1055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keyInput: {fileID: 686751487}
+  _keyInput: {fileID: 2032522126}
   _rb2d: {fileID: 572548960}
   _groundCheck: {fileID: 1636750651}
   _wallCheck: {fileID: 394955139}
@@ -71238,7 +71238,6 @@ GameObject:
   - component: {fileID: 686751490}
   - component: {fileID: 686751488}
   - component: {fileID: 686751489}
-  - component: {fileID: 686751487}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -71246,25 +71245,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &686751487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686751486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88e3de665493bdf469f16c9a64b6495e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  savePath: 
-  volumeMusics: 0
-  volumeSoundEffects: 0
-  jump: 0
-  left: 0
-  right: 0
-  pause: 0
 --- !u!114 &686751488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71279,7 +71259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioManagerObject: {fileID: 920515244}
   _stageMusic: {fileID: 8300000, guid: f29f7d3995d8e8f41990e0e207c6eb3b, type: 3}
-  _keyInput: {fileID: 686751487}
+  _keyInput: {fileID: 2032522126}
   _score: {fileID: 1108976544}
   _timer: {fileID: 1999968112}
   _continue: {fileID: 304696098}
@@ -104189,6 +104169,7 @@ MonoBehaviour:
   _UI: {fileID: 475401437}
   _options: {fileID: 540738301}
   _textButtonOpt: {fileID: 2032522125}
+  _keyInput: {fileID: 2032522126}
 --- !u!1 &2115330730
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
             _pause.EscapeButton(_audioManager);
     }
 
-
     public void LooseGame()
     {
         Time.timeScale = 0f;

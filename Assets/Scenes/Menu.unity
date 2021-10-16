@@ -1893,6 +1893,7 @@ MonoBehaviour:
   _UI: {fileID: 267984366}
   _options: {fileID: 338740811}
   _textButtonOpt: {fileID: 673367072}
+  _keyInput: {fileID: 673367073}
 --- !u!4 &673367075
 Transform:
   m_ObjectHideFlags: 0
