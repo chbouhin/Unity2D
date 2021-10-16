@@ -28,7 +28,7 @@ public class BossManager : MonoBehaviour
 
     private void Update()
     {
-        if (_player.position.x > 333)
+        if (_player.position.x > 336.5f)
         {
             FightBossStart();
             if (!_bossMusicPlaying)

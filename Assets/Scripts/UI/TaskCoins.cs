@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TaskCoins : MonoBehaviour
 {
     [SerializeField] private Text _textTask;
+    [SerializeField] private ParticleSystem _explosion;
     private int coin = 0;
 
     private void Start()
@@ -17,7 +18,9 @@ public class TaskCoins : MonoBehaviour
     {
         coin++;
         _textTask.text = "Get 5 coins (" + coin + "/5)";
-        if (coin >= 5)
+        if (coin == 5) {
             _textTask.color = Color.green;
+			_explosion.Play();
+        }
     }
 }
