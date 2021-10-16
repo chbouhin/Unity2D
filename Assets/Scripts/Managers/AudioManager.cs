@@ -19,11 +19,6 @@ public class AudioManager : MonoBehaviour
         _sound.PlayOneShot(clip);
     }
 
-    public void SetVolumeSounds(float value)
-    {
-        _sound.volume = value;
-    }
-
     public void PlayMusic(AudioClip clip)
     {
         _music.PlayOneShot(clip);
@@ -57,6 +52,11 @@ public class AudioManager : MonoBehaviour
 
     public void SetVolumeMusics(float value)
     {
-        _music.volume = value;
+        // _music.volume = value;
+    }
+
+    public void SetVolumeSoundEffects(float value)
+    {
+        // _sound.volume = value;
     }
 }

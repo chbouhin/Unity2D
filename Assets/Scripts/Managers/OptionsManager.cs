@@ -11,7 +11,7 @@ public class OptionsManager : MonoBehaviour
 
     public void ShowOptions()
     {
-        _textButtonOpt.InitText();
+        _textButtonOpt.InitOpt();
         _UI.SetActive(false);
         _options.SetActive(true);
     }

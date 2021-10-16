@@ -5,6 +5,7 @@ using System.IO;
 
 public class KeyInput : MonoBehaviour
 {
+    [SerializeField] private AudioManager _audioManager;
     [HideInInspector] public string savePath;
     [HideInInspector] public float volumeMusics;
     [HideInInspector] public float volumeSoundEffects;
@@ -25,6 +26,8 @@ public class KeyInput : MonoBehaviour
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(File.ReadAllText(savePath));
             volumeMusics = saveObject.volumeMusics;
             volumeSoundEffects = saveObject.volumeSoundEffects;
+            _audioManager.SetVolumeMusics(volumeMusics);
+            _audioManager.SetVolumeSoundEffects(volumeSoundEffects);
             jump = saveObject.jump;
             left = saveObject.left;
             right = saveObject.right;

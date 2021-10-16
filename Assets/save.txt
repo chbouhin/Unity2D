@@ -1,1 +1,1 @@
-{"volumeMusics":0.0,"volumeSoundEffects":0.0,"jump":122,"left":113,"right":100,"pause":27}
+{"volumeMusics":1.0,"volumeSoundEffects":0.0,"jump":122,"left":113,"right":100,"pause":27}

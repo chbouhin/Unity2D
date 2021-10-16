@@ -8,11 +8,16 @@ public class TextButtonOpt : MonoBehaviour
 {
     [SerializeField] private KeyInput _keyInput;
     [SerializeField] private Text[] _texts;
+    [SerializeField] private AudioManager _audioManager;
+    [SerializeField] private Slider _musics;
+    [SerializeField] private Slider _soundEffects;
     private Text _textSelect;
     private string _stringTextSave;
 
-    public void InitText()
+    public void InitOpt()
     {
+        _musics.value = _keyInput.volumeMusics;
+        _soundEffects.value = _keyInput.volumeSoundEffects;
         _texts[0].text = _keyInput.jump.ToString();
         _texts[1].text = _keyInput.left.ToString();
         _texts[2].text = _keyInput.right.ToString();
@@ -51,6 +56,8 @@ public class TextButtonOpt : MonoBehaviour
     {
         DeleteTextSelect();
         SaveObject saveObject = new SaveObject {
+            volumeMusics = _musics.value,
+            volumeSoundEffects = _soundEffects.value,
             jump = (KeyCode) System.Enum.Parse(typeof(KeyCode), _texts[0].text),
             left = (KeyCode) System.Enum.Parse(typeof(KeyCode), _texts[1].text),
             right = (KeyCode) System.Enum.Parse(typeof(KeyCode), _texts[2].text),
