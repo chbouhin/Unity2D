@@ -14,8 +14,6 @@ public class Coin : Item
     private void Start()
     {
         _audioManager =  GameObject.Find("AudioManager").GetComponent<AudioManager>();
-        _score = GameObject.Find("Score").GetComponent<Score>();
-        _taskCoins = GameObject.Find("CoinsTask").GetComponent<TaskCoins>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -33,6 +31,8 @@ public class Coin : Item
 
     private void Use(float timer)
     {
+        _score = GameObject.Find("Score").GetComponent<Score>();
+        _taskCoins = GameObject.Find("CoinsTask").GetComponent<TaskCoins>();
         _score.AddScore(50);
         _taskCoins.AddCoin();
         _audioManager.PlaySound(_audioCoin);

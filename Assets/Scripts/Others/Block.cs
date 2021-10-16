@@ -4,30 +4,24 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    [SerializeField] private GameObject audioManagerObject;
-    [SerializeField] private AudioClip hitSound;
-    [SerializeField] private AudioClip breakSound;
-    [SerializeField] private bool destroyable;
-    private AudioManager audioManager;    
+    [SerializeField] private AudioClip _hitSound;
+    [SerializeField] private AudioClip _breakSound;
+    [SerializeField] private bool _destroyable;
+    private AudioManager _audioManager;    
     
     private void Start()
     {
-        audioManager = audioManagerObject.GetComponent<AudioManager>();
-    }
-
-    private void OnMouseDown()//TEMPORAIRE
-    {
-        gameObject.GetComponent<Block>().Activate();
+        _audioManager =  GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void Activate()
     {
-        if (destroyable)
+        if (_destroyable)
         {
-            audioManager.PlaySound(breakSound);
+            _audioManager.PlaySound(_breakSound);
             Destroy(gameObject);
             return;
         }
-        audioManager.PlaySound(hitSound);
+        _audioManager.PlaySound(_hitSound);
     }
 }

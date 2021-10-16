@@ -9,10 +9,17 @@ public class PlayerHitBoxBody : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log(col.transform.tag);
         if (col.transform.CompareTag("Enemy") && !_health.IsInvicible())
             _health.TakeDamage();
 
         if (col.transform.CompareTag("Button") && !_playerManager.IsFalling())
             col.gameObject.GetComponent<ButtonCanon>().JumpOnButton();
+
+        if (col.transform.CompareTag("Block") && !_playerManager.IsFalling())
+            col.gameObject.GetComponent<Block>().Activate();
+
+        if (col.transform.CompareTag("BonusBlock") && !_playerManager.IsFalling())
+            col.gameObject.GetComponent<Bonus_block>().Activate();
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8250467000637192256}
   m_Layer: 3
   m_Name: Mushroom block
-  m_TagString: Wall
+  m_TagString: BonusBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

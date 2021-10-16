@@ -24,24 +24,19 @@ public class Bonus_block : MonoBehaviour
     {
         
     }
-
-    private void OnMouseDown()//TEMPORAIRE
-    {
-        gameObject.GetComponent<Bonus_block>().Activate();
-    }
-    
+ 
     public void Activate()
     {
         var parent = gameObject.transform;
 
         if (_used)
             return;
+        _used = true;
         _audioManager.PlaySound(_hitSound);
         var item = Instantiate(_bonusItem);
         item.transform.parent = parent;
         item.Init(_audioManager);
         item.transform.position = parent.position + new Vector3(0, 0, 1);
-        _used = true;
 
         gameObject.GetComponent<Animator>().enabled = false;
         GetComponent<SpriteRenderer>().sprite = _usedSprite;

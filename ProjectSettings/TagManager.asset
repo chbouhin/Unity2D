@@ -9,6 +9,8 @@ TagManager:
   - Button
   - InvisibleWall
   - EnemyHead
+  - BonusBlock
+  - Block
   layers:
   - Default
   - TransparentFX

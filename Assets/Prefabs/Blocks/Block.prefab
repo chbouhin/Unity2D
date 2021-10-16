@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 525578222}
   m_Layer: 0
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,10 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e694fd366b3c24499f156fb2d9feaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManagerObject: {fileID: 1846367493201524243, guid: 50f4ced2532599a48a02b8ffcd718461, type: 3}
-  hitSound: {fileID: 8300000, guid: c2d9d5d0a5958064682516e4f56de688, type: 3}
-  breakSound: {fileID: 8300000, guid: b312f548374bebe458a385780946efce, type: 3}
-  destroyable: 1
+  _hitSound: {fileID: 8300000, guid: c2d9d5d0a5958064682516e4f56de688, type: 3}
+  _breakSound: {fileID: 8300000, guid: b312f548374bebe458a385780946efce, type: 3}
+  _destroyable: 0
 --- !u!61 &525578222
 BoxCollider2D:
   m_ObjectHideFlags: 0
