@@ -19,7 +19,7 @@ public class KeyInput : MonoBehaviour
         Load();
     }
 
-    private void Load()
+    public void Load()
     {
         if (File.Exists(savePath)) {
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(File.ReadAllText(savePath));

@@ -11,7 +11,7 @@ public class TextButtonOpt : MonoBehaviour
     private Text _textSelect;
     private string _stringTextSave;
 
-    private void Start()
+    public void InitText()
     {
         _texts[0].text = _keyInput.jump.ToString();
         _texts[1].text = _keyInput.left.ToString();
