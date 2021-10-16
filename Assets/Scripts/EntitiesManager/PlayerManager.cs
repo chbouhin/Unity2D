@@ -89,6 +89,6 @@ public class PlayerManager : MonoBehaviour
 
     public bool IsFalling()
     {
-        return _rb2d.velocity.y <= 0;
+        return _rb2d.velocity.y < 0;
     }
 }
