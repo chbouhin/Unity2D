@@ -52,11 +52,11 @@ public class AudioManager : MonoBehaviour
 
     public void SetVolumeMusics(float value)
     {
-        // _music.volume = value;
+        _music.volume = value;
     }
 
     public void SetVolumeSoundEffects(float value)
     {
-        // _sound.volume = value;
+        _sound.volume = value;
     }
 }
