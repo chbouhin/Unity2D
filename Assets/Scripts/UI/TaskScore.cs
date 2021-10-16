@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class TaskScore : MonoBehaviour
 {
     [SerializeField] private Text _textTask;
+    [SerializeField] private ParticleSystem _explosion;
+    private bool isFinish = false;
 
     private void Start()
     {
@@ -15,7 +17,12 @@ public class TaskScore : MonoBehaviour
     public void ScoreChange(int score)
     {
         _textTask.text = "Get 5000 to score (" + score + "/5000)";
-        if (score >= 5000)
-            _textTask.color = Color.green;
+        if (score >= 5000) {
+            if (!isFinish) {
+                _textTask.color = Color.green;
+                _explosion.Play();
+            }
+            isFinish = true;
+        }
     }
 }

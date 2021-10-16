@@ -23,7 +23,7 @@ public class BossManager : MonoBehaviour
 
     private void Update()
     {
-        if (_player.position.x > 10)
+        if (_player.position.x > 336.5f)
             FightBossStart();
     }
 
