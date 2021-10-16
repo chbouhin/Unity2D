@@ -33,21 +33,23 @@ public class TextButtonOpt : MonoBehaviour
 
     public void OnPress(Text text)
     {
-        if (_textSelect) {
-            _textSelect.text = _stringTextSave;
-            _textSelect = null;
-        }
+        DeleteTextSelect();
         _textSelect = text;
         _stringTextSave = _textSelect.text;
         _textSelect.text = "<>";
     }
 
-    public void Save()
+    public void DeleteTextSelect()
     {
         if (_textSelect) {
             _textSelect.text = _stringTextSave;
             _textSelect = null;
         }
+    }
+
+    public void Save()
+    {
+        DeleteTextSelect();
         SaveObject saveObject = new SaveObject {
             jump = (KeyCode) System.Enum.Parse(typeof(KeyCode), _texts[0].text),
             left = (KeyCode) System.Enum.Parse(typeof(KeyCode), _texts[1].text),

@@ -6,6 +6,8 @@ using System.IO;
 public class KeyInput : MonoBehaviour
 {
     [HideInInspector] public string savePath;
+    [HideInInspector] public float volumeMusics;
+    [HideInInspector] public float volumeSoundEffects;
     [HideInInspector] public KeyCode jump;
     [HideInInspector] public KeyCode left;
     [HideInInspector] public KeyCode right;
@@ -21,6 +23,8 @@ public class KeyInput : MonoBehaviour
     {
         if (File.Exists(savePath)) {
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(File.ReadAllText(savePath));
+            volumeMusics = saveObject.volumeMusics;
+            volumeSoundEffects = saveObject.volumeSoundEffects;
             jump = saveObject.jump;
             left = saveObject.left;
             right = saveObject.right;
@@ -31,6 +35,8 @@ public class KeyInput : MonoBehaviour
 
 public class SaveObject
 {
+    public float volumeMusics;
+    public float volumeSoundEffects;
     public KeyCode jump;
     public KeyCode left;
     public KeyCode right;
