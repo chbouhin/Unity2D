@@ -28815,6 +28815,10 @@ PrefabInstance:
       propertyPath: destroyable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 419505284097505701, guid: a16ae2090d109af41bcc0e7d173c5231, type: 3}
+      propertyPath: _destroyable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 419505284097505702, guid: a16ae2090d109af41bcc0e7d173c5231, type: 3}
       propertyPath: m_Name
       value: Block (1)
@@ -100549,6 +100553,10 @@ PrefabInstance:
     - target: {fileID: 419505284097505701, guid: a16ae2090d109af41bcc0e7d173c5231, type: 3}
       propertyPath: destroyable
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 419505284097505701, guid: a16ae2090d109af41bcc0e7d173c5231, type: 3}
+      propertyPath: _destroyable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 419505284097505702, guid: a16ae2090d109af41bcc0e7d173c5231, type: 3}
       propertyPath: m_Name
