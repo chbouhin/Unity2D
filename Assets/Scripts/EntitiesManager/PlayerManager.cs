@@ -32,27 +32,30 @@ public class PlayerManager : MonoBehaviour
 
     private void Movement()
     {
-        if (Input.GetKey(_keyInput.left) && (transform.localScale.x > 0 || !Physics2D.OverlapBox(_wallCheck.position, _wallCheck.localScale, 0, _groundLayer))) {
-            transform.position -= transform.right * moveSpeed * Time.deltaTime;
-            if (transform.localScale.x > 0)
-                goRight = false;
-        }
         if (Input.GetKey(_keyInput.right) && (transform.localScale.x < 0 || !Physics2D.OverlapBox(_wallCheck.position, _wallCheck.localScale, 0, _groundLayer))) {
             transform.position += transform.right * moveSpeed * Time.deltaTime;
             if (transform.localScale.x < 0)
                 goRight = true;
+        } else if (Input.GetKey(_keyInput.left) && (transform.localScale.x > 0 || !Physics2D.OverlapBox(_wallCheck.position, _wallCheck.localScale, 0, _groundLayer))) {
+            transform.position -= transform.right * moveSpeed * Time.deltaTime;
+            if (transform.localScale.x > 0)
+                goRight = false;
         }
         if (goRight) {
             if (_scale.x < 1) {
                 _scale.x += Time.deltaTime * 8;
                 if (_scale.x > 1)
                     _scale.x = 1;
+                else if (-0.01f > _scale.x && _scale.x > 0.01f)
+                    _scale.x = 0.01f;
                 transform.localScale = _scale;
             }
         } else if (_scale.x > -1) {
             _scale.x -= Time.deltaTime * 8;
             if (_scale.x < -1)
                 _scale.x = -1;
+            else if (-0.01f > _scale.x && _scale.x > 0.01f)
+                _scale.x = -0.01f;
             transform.localScale = _scale;
         }
     }
