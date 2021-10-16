@@ -71,8 +71,8 @@ public class BossManager : MonoBehaviour
         if (timerCooldownSpawnEnemy < cooldownSpawnEnemy) {
             timerCooldownSpawnEnemy += Time.deltaTime;
         } else {
-            Rigidbody2D rb2D = Instantiate(_spawnEnemy, transform.position + new Vector3(-3, 3, 0), Quaternion.identity).GetComponent<Rigidbody2D>();
-            rb2D.velocity = new Vector2(-1, 1);
+            Rigidbody2D rb2D = Instantiate(_spawnEnemy, transform.position + new Vector3(-4, 3, 0), Quaternion.identity).GetComponent<Rigidbody2D>();
+            rb2D.velocity = new Vector2(-2, 2);
             timerCooldownSpawnEnemy -= cooldownSpawnEnemy;
         }
     }

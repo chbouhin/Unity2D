@@ -9,11 +9,6 @@ public class TaskCoins : MonoBehaviour
     [SerializeField] private ParticleSystem _explosion;
     private int coin = 0;
 
-    private void Start()
-    {
-        _textTask.text = "Get 5 coins (0/5)";
-    }
-
     public void AddCoin()
     {
         coin++;

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BossHealth : Health
 {
     [SerializeField] private BossManager _bossManager;
+    [SerializeField] private TaskKillBowser _taskKillBowser;
     private Score _score;
     private int scoreGive = 1000;
     private int life = 3;
@@ -28,6 +29,7 @@ public class BossHealth : Health
     public override void Die()
     {
         _score.AddScore(scoreGive);
+        _taskKillBowser.KillBowser();
         Destroy(gameObject);
     }
 }

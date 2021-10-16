@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb2d;
     [SerializeField] private Transform _groundCheck;
     [SerializeField] private Transform _wallCheck;
+    [SerializeField] private EndHitBox _endHitBox;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private GameObject _audioManagerObject;
     [SerializeField] private AudioClip _jumpSound;
@@ -28,10 +29,12 @@ public class PlayerManager : MonoBehaviour
 
     private void Update()
     {
-        Movement();
-        TryJumping();
-        if (_rb2d.velocity.y < -15)
-            _rb2d.velocity = new Vector2(0, -15);
+        if (!_endHitBox.end) {
+            Movement();
+            TryJumping();
+            if (_rb2d.velocity.y < -15)
+                _rb2d.velocity = new Vector2(0, -15);
+        }
     }
 
     private void Movement()

@@ -9,11 +9,6 @@ public class TaskScore : MonoBehaviour
     [SerializeField] private ParticleSystem _explosion;
     private bool isFinish = false;
 
-    private void Start()
-    {
-        _textTask.text = "Get 5000 to score (0/5000)";
-    }
-
     public void ScoreChange(int score)
     {
         _textTask.text = "Get 5000 to score (" + score + "/5000)";
