@@ -53,7 +53,7 @@ public class PlayerManager : MonoBehaviour
                 _scale.x += Time.deltaTime * 8;
                 if (_scale.x > 1)
                     _scale.x = 1;
-                else if (-0.1f > _scale.x && _scale.x > 0.1f)
+                else if (-0.1f < _scale.x && _scale.x < 0.1f)
                     _scale.x = 0.1f;
                 transform.localScale = _scale;
             }
@@ -61,7 +61,7 @@ public class PlayerManager : MonoBehaviour
             _scale.x -= Time.deltaTime * 8;
             if (_scale.x < -1)
                 _scale.x = -1;
-            else if (-0.1f > _scale.x && _scale.x > 0.1f)
+            else if (-0.1f < _scale.x && _scale.x < 0.1f)
                 _scale.x = -0.1f;
             transform.localScale = _scale;
         }
