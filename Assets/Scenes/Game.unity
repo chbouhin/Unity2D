@@ -26354,6 +26354,8 @@ MonoBehaviour:
   _bigMario: {fileID: 1546552326}
   _smallMario: {fileID: 1586289871}
   _rigidbody: {fileID: 572548960}
+  _audioManager: {fileID: 920515245}
+  _sound: {fileID: 8300000, guid: 4a6663e15c6b3194caa45d9b884d49cd, type: 3}
   end: 0
 --- !u!61 &263540443
 BoxCollider2D:
