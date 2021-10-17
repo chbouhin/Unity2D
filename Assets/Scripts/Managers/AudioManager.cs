@@ -6,17 +6,24 @@ public class AudioManager : MonoBehaviour
 {
     private AudioSource _music;
     private AudioSource _sound;
+    private AudioSource _optionsMusic;
     
     private void Awake()
     {
         AudioSource[] sources = gameObject.GetComponents<AudioSource>();
         _music = sources[0];
         _sound = sources[1];
+        _optionsMusic = sources[2];
     }
 
     public void PlaySound(AudioClip clip)
     {
         _sound.PlayOneShot(clip);
+    }
+
+    public void PlayMusicOptions(AudioClip clip)
+    {
+        _optionsMusic.PlayOneShot(clip);
     }
 
     public void PlayMusic(AudioClip clip)
@@ -39,6 +46,11 @@ public class AudioManager : MonoBehaviour
         _music.Play();
     }
 
+    public void StopMusicOptions()
+    {
+        _optionsMusic.Stop();
+    }
+
     public void StopMusic()
     {
         _music.Stop();
@@ -53,6 +65,7 @@ public class AudioManager : MonoBehaviour
     public void SetVolumeMusics(float value)
     {
         _music.volume = value;
+        _optionsMusic.volume = value;
     }
 
     public void SetVolumeSoundEffects(float value)

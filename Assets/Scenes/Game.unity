@@ -72684,7 +72684,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2032522125}
+        m_TargetAssemblyTypeName: TextButtonOpt, Assembly-CSharp
+        m_MethodName: VolumeMusicsChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1056914325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101389,7 +101401,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2032522125}
+        m_TargetAssemblyTypeName: TextButtonOpt, Assembly-CSharp
+        m_MethodName: VolumeSoundEffectsChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1620456332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -104170,6 +104194,8 @@ MonoBehaviour:
   _options: {fileID: 540738301}
   _textButtonOpt: {fileID: 2032522125}
   _keyInput: {fileID: 2032522126}
+  _audioManager: {fileID: 920515245}
+  _optionsMusic: {fileID: 8300000, guid: 35a150993bfc9964d96cd3241e5d3343, type: 3}
 --- !u!1 &2115330730
 GameObject:
   m_ObjectHideFlags: 0

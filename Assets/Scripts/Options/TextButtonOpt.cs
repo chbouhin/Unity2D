@@ -24,6 +24,16 @@ public class TextButtonOpt : MonoBehaviour
         _texts[3].text = _keyInput.pause.ToString();
     }
 
+    public void VolumeMusicsChange()
+    {
+        _audioManager.SetVolumeMusics(_musics.value);
+    }
+
+    public void VolumeSoundEffectsChange()
+    {
+        _audioManager.SetVolumeSoundEffects(_soundEffects.value);
+    }
+
     private void OnGUI()
     {
         if (Input.anyKeyDown)

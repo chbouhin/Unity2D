@@ -11,7 +11,7 @@ public class BossManager : MonoBehaviour
     [SerializeField] private AudioClip _bossMusic;
     [SerializeField] private AudioClip _fireballSound;
     private AudioManager _audioManager;
-    private bool _bossMusicPlaying;
+    private bool _bossMusicPlaying = false;
     private Transform _player;
     private float cooldownFireball = 7f;
     private float timerCooldownFireball = 0f;
@@ -31,8 +31,7 @@ public class BossManager : MonoBehaviour
         if (_player.position.x > 336.5f)
         {
             FightBossStart();
-            if (!_bossMusicPlaying)
-            {
+            if (!_bossMusicPlaying) {
                 _bossMusicPlaying = true;
                 _audioManager.StopMusic();
                 _audioManager.PlayMusic(_bossMusic);

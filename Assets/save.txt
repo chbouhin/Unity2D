@@ -1,1 +1,1 @@
-{"volumeMusics":0.2669828534126282,"volumeSoundEffects":0.27721044421195986,"jump":122,"left":113,"right":100,"pause":27}
+{"volumeMusics":0.7587323188781738,"volumeSoundEffects":0.9517456889152527,"jump":122,"left":113,"right":100,"pause":27}
