@@ -34,6 +34,11 @@ public class TextButtonOpt : MonoBehaviour
         _audioManager.SetVolumeSoundEffects(_soundEffects.value);
     }
 
+    public void SoundTest(AudioClip clip)
+    {
+        _audioManager.PlaySound(clip);
+    }
+
     private void OnGUI()
     {
         if (Input.anyKeyDown)
