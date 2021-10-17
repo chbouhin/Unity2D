@@ -6,6 +6,7 @@ using System.IO;
 public class KeyInput : MonoBehaviour
 {
     [SerializeField] private AudioManager _audioManager;
+    // [SerializeField] private SceneUpdate _sceneUpdate;
     [HideInInspector] public string savePath;
     [HideInInspector] public float volumeMusics;
     [HideInInspector] public float volumeSoundEffects;
@@ -22,6 +23,8 @@ public class KeyInput : MonoBehaviour
 
     public void Load()
     {
+        if (!File.Exists(savePath))
+            CreateNewSave();
         if (File.Exists(savePath)) {
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(File.ReadAllText(savePath));
             volumeMusics = saveObject.volumeMusics;
@@ -32,7 +35,22 @@ public class KeyInput : MonoBehaviour
             left = saveObject.left;
             right = saveObject.right;
             pause = saveObject.pause;
+        } else {
+            // _sceneUpdate.QuitGame();
         }
+    }
+
+    private void CreateNewSave()
+    {
+        SaveObject saveObject = new SaveObject {
+            volumeMusics = 0.5f,
+            volumeSoundEffects = 0.5f,
+            jump = KeyCode.Z,
+            left = KeyCode.Q,
+            right = KeyCode.D,
+            pause = KeyCode.Escape,
+        };
+        File.WriteAllText(savePath, JsonUtility.ToJson(saveObject));
     }
 }
 

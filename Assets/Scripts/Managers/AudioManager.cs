@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource _music;
     private AudioSource _sound;
     private AudioSource _optionsMusic;
-    
+
     private void Awake()
     {
         AudioSource[] sources = gameObject.GetComponents<AudioSource>();
