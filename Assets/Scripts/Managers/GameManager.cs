@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button _continue;
     [SerializeField] private PauseManager _pause;
     [SerializeField] private Text _textUIPause;
+    private bool inGame = true;
 
     private void Start()
     {
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(_keyInput.pause))
+        if (Input.GetKeyDown(_keyInput.pause) && inGame)
             _pause.EscapeButton(_audioManager);
     }
 
@@ -36,14 +37,12 @@ public class GameManager : MonoBehaviour
     {
         _audioManager.StopMusic();
         _audioManager.PlayMusic(_looseMusic);
-        print("test");
-        if (_looseMusic)
-            print("test2");
         Time.timeScale = 0f;
         _textUIPause.text = "Defeat";
         _textUIPause.color = Color.red;
         _pause.gameObject.SetActive(true);
         _continue.interactable = false;
+        inGame = false;
     }
 
     public void WinGame()
@@ -56,5 +55,6 @@ public class GameManager : MonoBehaviour
         _continue.interactable = false;
         _score.AddScore((int) (_timer.timer * 10));
         _pause.gameObject.SetActive(true);
+        inGame = false;
     }
 }
