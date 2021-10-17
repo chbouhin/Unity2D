@@ -12,8 +12,8 @@ public class TaskCoins : MonoBehaviour
     public void AddCoin()
     {
         coin++;
-        _textTask.text = "Get 5 coins (" + coin + "/5)";
-        if (coin == 5) {
+        _textTask.text = "Get 10 coins (" + coin + "/10)";
+        if (coin == 10) {
             _textTask.color = Color.green;
 			_explosion.Play();
         }

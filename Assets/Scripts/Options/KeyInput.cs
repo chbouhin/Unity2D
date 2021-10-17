@@ -17,7 +17,7 @@ public class KeyInput : MonoBehaviour
 
     private void Start()
     {
-        savePath = Application.dataPath + "/save.txt";
+        savePath = Application.persistentDataPath + "/save.txt";
         Load();
     }
 

@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         _audioManager = _audioManagerObject.GetComponent<AudioManager>();
         _audioManager.PlayMusic(_stageMusic);
-        Time.timeScale = 1f;
     }
 
     private void Update()

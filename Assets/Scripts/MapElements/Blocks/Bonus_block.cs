@@ -28,7 +28,7 @@ public class Bonus_block : MonoBehaviour
         var item = Instantiate(_bonusItem);
         item.transform.parent = parent;
         item.Init(_audioManager);
-        item.transform.position = parent.position + new Vector3(0, 0, 1);
+        item.transform.position = parent.position + new Vector3(0f, 0.3f, 1f);
 
         gameObject.GetComponent<Animator>().enabled = false;
         GetComponent<SpriteRenderer>().sprite = _usedSprite;
