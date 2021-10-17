@@ -9,11 +9,14 @@ public class EndHitBox : MonoBehaviour
     [SerializeField] private BoxCollider2D _bigMario;
     [SerializeField] private BoxCollider2D _smallMario;
     [SerializeField] private Rigidbody2D _rigidbody;
+    [SerializeField] private AudioManager _audioManager;
+    [SerializeField] private AudioClip _sound;
     [HideInInspector] public bool end = false;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.transform.CompareTag("Player")) {
+            _audioManager.PlaySound(_sound);
             end = true;
             _bigMario.enabled = false;
             _smallMario.enabled = false;
