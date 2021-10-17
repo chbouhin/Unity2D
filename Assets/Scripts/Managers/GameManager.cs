@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _audioManagerObject;
     [SerializeField] private AudioClip _stageMusic;
+    [SerializeField] private AudioClip _winMusic;
+    [SerializeField] private AudioClip _looseMusic;
     private AudioManager _audioManager;
     
     [SerializeField] private KeyInput _keyInput;
@@ -21,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         _audioManager = _audioManagerObject.GetComponent<AudioManager>();
-        _audioManager.PlayMusic(_stageMusic);
+        _audioManager.PlayMusic(_stageMusic, true);
     }
 
     private void Update()
@@ -33,6 +35,10 @@ public class GameManager : MonoBehaviour
     public void LooseGame()
     {
         _audioManager.StopMusic();
+        _audioManager.PlayMusic(_looseMusic);
+        print("test");
+        if (_looseMusic)
+            print("test2");
         Time.timeScale = 0f;
         _textUIPause.text = "Defeat";
         _textUIPause.color = Color.red;
@@ -43,6 +49,7 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         _audioManager.StopMusic();
+        _audioManager.PlayMusic(_winMusic);
         Time.timeScale = 0f;
         _textUIPause.text = "Victory";
         _textUIPause.color = Color.green;

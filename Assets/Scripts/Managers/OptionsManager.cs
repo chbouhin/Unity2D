@@ -17,7 +17,7 @@ public class OptionsManager : MonoBehaviour
         _UI.SetActive(false);
         _options.SetActive(true);
         if (_optionsMusic)
-            _audioManager.PlayMusicOptions(_optionsMusic);
+            _audioManager.PlayMusicOptions(_optionsMusic, true);
     }
 
     public void HideOptions()

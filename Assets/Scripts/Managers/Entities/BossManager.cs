@@ -34,7 +34,7 @@ public class BossManager : MonoBehaviour
             if (!_bossMusicPlaying) {
                 _bossMusicPlaying = true;
                 _audioManager.StopMusic();
-                _audioManager.PlayMusic(_bossMusic);
+                _audioManager.PlayMusic(_bossMusic, true);
             }
         }
     }

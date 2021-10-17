@@ -20,23 +20,23 @@ public class PlayerHealth : Health
     private new void Update()
     {
         base.Update();
-        if (transform.position.y <= -11)
+        if (life > 0 && transform.position.y <= -11)
             Die();
     }
 
     public override void TakeDamage()
     {
         life--;
-        if (life == 0)
+        if (life == 0) {
             Die();
-        else {
+        } else {
             TimerInvicibleTime = 0f;
             _bigMario.SetActive(false);
             _smallMario.SetActive(true);
             _audioManager.PlaySound(_shrinkSound);
         }
     }
-    
+
     public void GetBonus()
     {
         if (life == 1) {
@@ -49,5 +49,6 @@ public class PlayerHealth : Health
     public override void Die()
     {
         _gameManager.LooseGame();
+        life = 0;
     }
 }

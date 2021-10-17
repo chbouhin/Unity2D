@@ -12,6 +12,6 @@ public class MenuManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         _audioManager = _audioManagerObject.GetComponent<AudioManager>();
-        _audioManager.PlayMusic(_menuMusic);
+        _audioManager.PlayMusic(_menuMusic, true);
     }
 }

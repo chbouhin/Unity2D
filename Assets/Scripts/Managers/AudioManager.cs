@@ -21,17 +21,17 @@ public class AudioManager : MonoBehaviour
         _sound.PlayOneShot(clip);
     }
 
-    public void PlayMusicOptions(AudioClip clip)
+    public void PlayMusicOptions(AudioClip clip, bool loop = false)
     {
         _optionsMusic.clip = clip;
-        _optionsMusic.loop = true;
+        _optionsMusic.loop = loop;
         _optionsMusic.Play();
     }
 
-    public void PlayMusic(AudioClip clip)
+    public void PlayMusic(AudioClip clip, bool loop = false)
     {
         _music.clip = clip;
-        _music.loop = true;
+        _music.loop = loop;
         _music.Play();
     }
 
