@@ -107100,6 +107100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioManager: {fileID: 920515245}
+  _sceneUpdate: {fileID: 686751489}
   savePath: 
   volumeMusics: 0
   volumeSoundEffects: 0

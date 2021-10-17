@@ -6,7 +6,7 @@ using System.IO;
 public class KeyInput : MonoBehaviour
 {
     [SerializeField] private AudioManager _audioManager;
-    // [SerializeField] private SceneUpdate _sceneUpdate;
+    [SerializeField] private SceneUpdate _sceneUpdate;
     [HideInInspector] public string savePath;
     [HideInInspector] public float volumeMusics;
     [HideInInspector] public float volumeSoundEffects;
@@ -36,7 +36,7 @@ public class KeyInput : MonoBehaviour
             right = saveObject.right;
             pause = saveObject.pause;
         } else {
-            // _sceneUpdate.QuitGame();
+            _sceneUpdate.QuitGame();
         }
     }
 
