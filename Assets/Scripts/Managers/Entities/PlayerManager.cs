@@ -103,4 +103,9 @@ public class PlayerManager : MonoBehaviour
     {
         return _rb2d.velocity.y < 0;
     }
+    
+    public bool IsJumping()
+    {
+        return _rb2d.velocity.y > 0;
+    }
 }

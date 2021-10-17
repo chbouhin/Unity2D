@@ -102659,6 +102659,7 @@ GameObject:
   - component: {fileID: 1546552328}
   - component: {fileID: 1546552327}
   - component: {fileID: 1546552326}
+  - component: {fileID: 1546552329}
   m_Layer: 7
   m_Name: BigMario
   m_TagString: Player
@@ -102759,6 +102760,21 @@ Transform:
   m_Father: {fileID: 572548961}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1546552329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546552325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0c25c0e382a9e4e97f2b50010017e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _idleMario: {fileID: -4830012386604051497, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
+  _jumpingMario: {fileID: -604870751621487919, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
+  _fallingMario: {fileID: -3196848817124712831, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
 --- !u!1001 &1563346147
 PrefabInstance:
   m_ObjectHideFlags: 0
