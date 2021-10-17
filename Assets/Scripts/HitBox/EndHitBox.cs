@@ -21,6 +21,7 @@ public class EndHitBox : MonoBehaviour
             _bigMario.enabled = false;
             _smallMario.enabled = false;
             _rigidbody.gravityScale = 0;
+            _rigidbody.velocity = new Vector2(0, 0);
             _player.position = new Vector2(_player.position.x, -6);
         }
     }
