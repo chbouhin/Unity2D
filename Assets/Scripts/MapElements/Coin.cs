@@ -18,7 +18,7 @@ public class Coin : Item
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (col.gameObject.CompareTag("Player") && !_anim.IsPlaying("CoinPopUp"))
             Use(0);
     }
 
