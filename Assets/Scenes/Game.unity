@@ -102849,6 +102849,7 @@ GameObject:
   - component: {fileID: 1586289872}
   - component: {fileID: 1586289873}
   - component: {fileID: 1586289871}
+  - component: {fileID: 1586289874}
   m_Layer: 7
   m_Name: SmallMario
   m_TagString: Player
@@ -102949,6 +102950,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1586289874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586289870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8faf759bb0d438e45bd84411f2066205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _idleMario: {fileID: 4120955195336003847, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
+  _jumpingMario: {fileID: 8029536824772267597, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
+  _fallingMario: {fileID: -1516733375807340374, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
 --- !u!1001 &1587809134
 PrefabInstance:
   m_ObjectHideFlags: 0
