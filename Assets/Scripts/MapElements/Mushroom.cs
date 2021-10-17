@@ -54,7 +54,7 @@ public class Mushroom : Item
     
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Player")) {
+        if (col.gameObject.CompareTag("Player") && !_anim.IsPlaying("MushroomPopUp")) {
             _player.GetBonus();
             _audioManager.PlaySound(_audioUse);
             Destroy(gameObject);
