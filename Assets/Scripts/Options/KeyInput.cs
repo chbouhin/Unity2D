@@ -14,7 +14,7 @@ public class KeyInput : MonoBehaviour
     [HideInInspector] public KeyCode right;
     [HideInInspector] public KeyCode pause;
 
-    private void Awake()
+    private void Start()
     {
         savePath = Application.dataPath + "/save.txt";
         Load();
