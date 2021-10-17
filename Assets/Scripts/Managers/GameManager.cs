@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void LooseGame()
     {
+        _audioManager.StopMusic();
         Time.timeScale = 0f;
         _textUIPause.text = "Defeat";
         _textUIPause.color = Color.red;
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        _audioManager.StopMusic();
         Time.timeScale = 0f;
         _textUIPause.text = "Victory";
         _textUIPause.color = Color.green;
