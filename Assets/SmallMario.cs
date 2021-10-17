@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel.Design.Serialization;
 using UnityEngine;
 
-public class BigMario : MonoBehaviour
+public class SmallMario : MonoBehaviour
 {
     [SerializeField] private Sprite _idleMario;
     [SerializeField] private Sprite _jumpingMario;
