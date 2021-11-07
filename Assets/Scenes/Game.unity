@@ -39574,8 +39574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857a5be62f24fc54eb9fa5827d4d1055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keyInput: {fileID: 2032522126}
   _rb2d: {fileID: 572548960}
+  move: 0
+  _keyInput: {fileID: 2032522126}
   _groundCheck: {fileID: 1636750651}
   _wallCheck: {fileID: 394955139}
   _endHitBox: {fileID: 263540442}
@@ -102222,6 +102223,7 @@ GameObject:
   - component: {fileID: 1546552327}
   - component: {fileID: 1546552326}
   - component: {fileID: 1546552329}
+  - component: {fileID: 1546552330}
   m_Layer: 7
   m_Name: BigMario
   m_TagString: Player
@@ -102334,9 +102336,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0c25c0e382a9e4e97f2b50010017e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _idleMario: {fileID: -4830012386604051497, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
-  _jumpingMario: {fileID: -604870751621487919, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
-  _fallingMario: {fileID: -3196848817124712831, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
+  _animator: {fileID: 1546552330}
+  _playerManager: {fileID: 572548958}
+--- !u!95 &1546552330
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546552325}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f4e6105ebf9849afacb413a4c45d5a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1563346147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102410,6 +102430,7 @@ GameObject:
   - component: {fileID: 1586289873}
   - component: {fileID: 1586289871}
   - component: {fileID: 1586289874}
+  - component: {fileID: 1586289875}
   m_Layer: 7
   m_Name: SmallMario
   m_TagString: Player
@@ -102519,12 +102540,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586289870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8faf759bb0d438e45bd84411f2066205, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c0c25c0e382a9e4e97f2b50010017e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _idleMario: {fileID: 4120955195336003847, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
-  _jumpingMario: {fileID: 8029536824772267597, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
-  _fallingMario: {fileID: -1516733375807340374, guid: a156e6c2e70104729b4f0953292c05c0, type: 3}
+  _animator: {fileID: 1586289875}
+  _playerManager: {fileID: 572548958}
+--- !u!95 &1586289875
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586289870}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0e3e6d10d1de254ea1fa1d7f338e3f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1587809134
 PrefabInstance:
   m_ObjectHideFlags: 0
